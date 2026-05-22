@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete CSS Course | Styling the Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fefaff;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #2d3e50;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #eae6ff;
+            border-left: 8px solid #6c5ce7;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #3d2b7a;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #4a3b8c;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #6c5ce7;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #dfe9f3;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #4a3b8c;
+            border-bottom: 3px solid #ddd4ff;
+            display: inline-block;
+        }
+
+        footer {
+            background: #e3dfec;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #2d2b4a;
+        }
+
+        .demo-badge {
+            background: #e0e7ff;
+            border-radius: 20px;
+            padding: 4px 10px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">🎨 Complete CSS Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>🎨 Complete CSS – Style the Web Beautifully</h2>
+        <p>CSS (Cascading Style Sheets) brings designs to life. From colors and fonts to flexbox, grid, and animations – this course covers every topic with simple explanations and live code. Let's make things beautiful!</p>
+    </div>
+
+    <!-- SECTION 1: CSS Basics -->
+    <h2 class="section-title">🎨 1. CSS Fundamentals</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 What is CSS & Syntax</h3><div class="code-block">selector {<br>  property: value;<br>  another-property: value;<br>}</div><div class="explain">CSS rules: select element, then declare styles. Example: h1 { color: blue; }</div></div>
+        <div class="card"><h3>🔹 Ways to Add CSS</h3><div class="code-block">&lt;link rel="stylesheet" href="style.css"&gt;  // external<br>&lt;style&gt; ... &lt;/style&gt;  // internal<br>style="color:red"  // inline</div><div class="explain">External (best for large projects), Internal (single page), Inline (specific element).</div></div>
+        <div class="card"><h3>🔹 Colors & Units</h3><div class="code-block">color: red; background: #00ff00; <br>border-color: rgb(255,0,0); <br>width: 50%; margin: 10px; font-size: 1.2rem;</div><div class="explain">Named, hex, rgb, hsl. Units: px, em, rem, %, vw, vh.</div></div>
+    </div>
+
+    <!-- SECTION 2: Selectors -->
+    <h2 class="section-title">🎯 2. Selectors & Specificity</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Basic Selectors</h3><div class="code-block">* { }        /* universal */<br>div { }      /* element */<br>.class { }   /* class */<br>#id { }      /* id */</div><div class="explain">Element selects by tag. Class (.) reusable. ID (#) unique.</div></div>
+        <div class="card"><h3>🔹 Combinators & Grouping</h3><div class="code-block">div p { }    /* descendant */<br>div > p { }  /* child */<br>h1, h2 { }  /* grouping */</div><div class="explain">Space = any descendant. > = direct child. Comma = group selectors.</div></div>
+        <div class="card"><h3>🔹 Pseudo-classes & Pseudo-elements</h3><div class="code-block">a:hover { color:red; }<br>li:first-child { }<br>p::first-line { }<br>input:focus { }</div><div class="explain">:hover, :active, :nth-child(), ::before, ::after.</div></div>
+        <div class="card"><h3>🔹 Attribute Selectors</h3><div class="code-block">input[type="text"] { }<br>a[href^="https"] { }<br>[class~="btn"] { }</div><div class="explain">Target elements by attributes: ^= starts with, $= ends with, *= contains.</div></div>
+    </div>
+
+    <!-- SECTION 3: Box Model -->
+    <h2 class="section-title">📦 3. Box Model</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Content, Padding, Border, Margin</h3><div class="code-block">div {<br>  width: 200px;<br>  padding: 20px;<br>  border: 2px solid black;<br>  margin: 10px;<br>}</div><div class="explain">Content inside. Padding inside border. Margin outside. Total width = width + padding + border + margin.</div></div>
+        <div class="card"><h3>🔹 box-sizing: border-box</h3><div class="code-block">* { box-sizing: border-box; }<br>/* width includes padding & border */</div><div class="explain">Makes layout predictable. Width includes padding/border.</div></div>
+    </div>
+
+    <!-- SECTION 4: Typography & Backgrounds -->
+    <h2 class="section-title">✍️ 4. Typography & Backgrounds</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Font & Text Properties</h3><div class="code-block">font-family: 'Arial', sans-serif;<br>font-size: 16px; font-weight: bold;<br>text-align: center; line-height: 1.5;<br>text-decoration: none; text-transform: uppercase;</div><div class="explain">Font family, size, weight, line-height, letter-spacing, text align/decoration.</div></div>
+        <div class="card"><h3>🔹 Backgrounds</h3><div class="code-block">background-color: #f0f0f0;<br>background-image: url('img.jpg');<br>background-size: cover; background-position: center;<br>background-repeat: no-repeat;</div><div class="explain">Color, image, gradient, position, size, attachment.</div></div>
+    </div>
+
+    <!-- SECTION 5: Layout - Display & Position -->
+    <h2 class="section-title">🏗️ 5. Layout: Display & Position</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Display Property</h3><div class="code-block">display: block;   // full width<br>display: inline;  // width as content<br>display: inline-block; // inline but block features<br>display: none;    // hidden (removes space)</div><div class="explain">Block (div, p), inline (span, a), inline-block (mix).</div></div>
+        <div class="card"><h3>🔹 Positioning</h3><div class="code-block">position: static;   // default<br>position: relative; // relative to normal<br>position: absolute; // relative to nearest positioned ancestor<br>position: fixed;    // relative to viewport<br>position: sticky;   // scrolls then sticks</div><div class="explain">Use top, right, bottom, left offsets.</div></div>
+        <div class="card"><h3>🔹 Z-index & Stacking</h3><div class="code-block">z-index: 10;  /* only works on positioned elements */</div><div class="explain">Controls layering (higher number = on top).</div></div>
+    </div>
+
+    <!-- SECTION 6: Flexbox -->
+    <h2 class="section-title">🪄 6. Flexbox – One-Dimensional Layout</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Flex Container</h3><div class="code-block">.container {<br>  display: flex;<br>  flex-direction: row | column;<br>  justify-content: center | space-between;<br>  align-items: center | stretch;<br>}</div><div class="explain">Parent becomes flex container. Controls main axis (justify) and cross axis (align).</div></div>
+        <div class="card"><h3>🔹 Flex Items</h3><div class="code-block">.item {<br>  flex-grow: 1;   // take extra space<br>  flex-shrink: 0;  // no shrinking<br>  flex-basis: 100px;<br>  align-self: flex-end;<br>}</div><div class="explain">flex shorthand: flex: 1 1 auto. order to reorder items.</div></div>
+    </div>
+
+    <!-- SECTION 7: CSS Grid -->
+    <h2 class="section-title">🧩 7. CSS Grid – Two-Dimensional Layout</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Grid Container</h3><div class="code-block">.grid {<br>  display: grid;<br>  grid-template-columns: 1fr 2fr 1fr;<br>  grid-template-rows: auto 200px;<br>  gap: 20px;<br>}</div><div class="explain">Define columns and rows. fr = fraction. gap for spacing.</div></div>
+        <div class="card"><h3>🔹 Grid Item Placement</h3><div class="code-block">.item {<br>  grid-column: span 2 / 4;<br>  grid-row: 1 / 3;<br>}</div><div class="explain">grid-column: start / end; grid-area with named lines or grid-template-areas.</div></div>
+        <div class="card"><h3>🔹 Grid Template Areas</h3><div class="code-block">grid-template-areas:<br>  "header header"<br>  "sidebar main"<br>  "footer footer";<br>.header { grid-area: header; }</div><div class="explain">Visually map layout. Great for responsive.</div></div>
+    </div>
+
+    <!-- SECTION 8: Responsive Design -->
+    <h2 class="section-title">📱 8. Responsive Design & Media Queries</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Media Queries</h3><div class="code-block">@media (max-width: 768px) {<br>  body { font-size: 14px; }<br>  .flex-container { flex-direction: column; }<br>}</div><div class="explain">Apply styles based on screen width, height, orientation. Mobile-first: min-width.</div></div>
+        <div class="card"><h3>🔹 Viewport & Fluid Layouts</h3><div class="code-block">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>width: 100%; max-width: 1200px;</div><div class="explain">Viewport meta for mobile. Use max-width and relative units.</div></div>
+        <div class="card"><h3>🔹 Mobile First & Breakpoints</h3><div class="code-block">/* default small screens */<br>@media (min-width: 640px) { }<br>@media (min-width: 1024px) { }</div><div class="explain">Start with mobile, then add tablet/desktop styles.</div></div>
+    </div>
+
+    <!-- SECTION 9: Transitions & Animations -->
+    <h2 class="section-title">✨ 9. Transitions & Animations</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 CSS Transitions</h3><div class="code-block">.btn {<br>  transition: background 0.3s ease, transform 0.2s;<br>}<br>.btn:hover { background: blue; transform: scale(1.05); }</div><div class="explain">Smooth changes on hover/focus. Properties: all, delay, timing.</div></div>
+        <div class="card"><h3>🔹 Keyframes Animation</h3><div class="code-block">@keyframes slide {<br>  0% { transform: translateX(0); }<br>  100% { transform: translateX(100px); }<br>}<br>.box { animation: slide 2s infinite alternate; }</div><div class="explain">Define keyframes, then apply animation (duration, iteration, direction).</div></div>
+    </div>
+
+    <!-- SECTION 10: Advanced & Modern CSS -->
+    <h2 class="section-title">🚀 10. Advanced Topics</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 CSS Variables (Custom Properties)</h3><div class="code-block">:root { --primary-color: #3498db; }<br>button { background: var(--primary-color); }</div><div class="explain">Reusable values, change dynamically with JS or media queries.</div></div>
+        <div class="card"><h3>🔹 Flexbox vs Grid</h3><div class="explain">Flexbox: 1D (row or column). Grid: 2D (both axes). Use Flex for components, Grid for page layout.</div></div>
+        <div class="card"><h3>🔹 Transform & 3D</h3><div class="code-block">transform: translate(10px,20px) rotate(45deg) scale(1.2);<br>transform-style: preserve-3d; perspective: 500px;</div><div class="explain">Translate, rotate, scale, skew. 3D transforms with perspective.</div></div>
+        <div class="card"><h3>🔹 Pseudo-elements (::before, ::after)</h3><div class="code-block">.quote::before { content: "“"; font-size: 2em; }</div><div class="explain">Insert content without extra HTML. Often used for icons/decorations.</div></div>
+        <div class="card"><h3>🔹 CSS Filters & Blend Modes</h3><div class="code-block">filter: blur(5px) brightness(0.8);<br>background-blend-mode: multiply;</div><div class="explain">Filters: blur, grayscale, contrast. Blend modes for backgrounds.</div></div>
+        <div class="card"><h3>🔹 @import, @font-face, @keyframes</h3><div class="code-block">@import url('another.css');<br>@font-face { font-family: 'MyFont'; src: url('font.woff2'); }</div><div class="explain">Import external CSS, load custom fonts, define animations.</div></div>
+        <div class="card"><h3>🔹 CSS Frameworks (concept)</h3><div class="explain">Bootstrap, Tailwind, Foundation – pre-built components and utilities.</div></div>
+    </div>
+
+    <!-- SECTION 11: Best Practices + Cheatsheet -->
+    <hr>
+    <div style="background: #eae6ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 Complete CSS Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Selectors</strong><br>element, .class, #id, *, >, +, ~, :hover</div>
+            <div><strong>🔹 Box Model</strong><br>width, height, padding, margin, border, box-sizing</div>
+            <div><strong>🔹 Display & Position</strong><br>block, inline, flex, grid, relative, absolute, fixed, sticky</div>
+            <div><strong>🔹 Flexbox</strong><br>flex-direction, justify-content, align-items, flex-grow</div>
+            <div><strong>🔹 Grid</strong><br>grid-template-columns, gap, grid-area, grid-template-areas</div>
+            <div><strong>🔹 Units</strong><br>px, %, em, rem, vw, vh, fr</div>
+            <div><strong>🔹 Colors</strong><br>hex, rgb, rgba, hsl, hsla, named colors</div>
+            <div><strong>🔹 Typography</strong><br>font-family, font-size, font-weight, line-height, text-align</div>
+            <div><strong>🔹 Backgrounds</strong><br>bg-color, bg-image, bg-size, bg-position</div>
+            <div><strong>🔹 Transitions/Animations</strong><br>transition, transform, @keyframes, animation</div>
+            <div><strong>🔹 Responsive</strong><br>@media, viewport, mobile-first, breakpoints</div>
+            <div><strong>🔹 Variables</strong><br>--var-name, var(--var-name)</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Use browser DevTools to inspect and test CSS. Always use external stylesheets. Learn Flexbox and Grid – they are essential. Keep specificity low. Use CSS variables for themes.
+        </div>
+    </div>
+
+    <!-- Final Projects & Challenges -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Practice Projects (Build These!)</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Responsive personal portfolio (Flexbox + Grid + Media Queries)</li>
+            <li>Animated landing page with hover effects and keyframes</li>
+            <li>Card component with ::before pseudo-element for decoration</li>
+            <li>Restaurant menu layout using CSS Grid areas</li>
+            <li>Dark/Light mode toggle using CSS variables and JavaScript</li>
+            <li>Pure CSS dropdown menu using :hover and absolute positioning</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Remember:</strong> CSS is creative and practical. Experiment, use DevTools, and keep practicing. You now have a complete reference for every CSS topic!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🎨 Complete CSS Course – From zero to advanced styling. Master layouts, animations, and responsive design.<br>
+    Click "Home" to return to main website. Happy styling!</p>
+</footer>
+
+</body>
+</html>

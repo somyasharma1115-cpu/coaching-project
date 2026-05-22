@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete SQL Course | Master Database Queries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #1e3a5f;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #e0f2fe;
+            border-left: 8px solid #0284c7;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #075985;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #0c4a6e;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #38bdf8;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #e8f0f5;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #075985;
+            border-bottom: 3px solid #bae6fd;
+            display: inline-block;
+        }
+
+        footer {
+            background: #cbd5e1;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #1f3a4b;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 Course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">🗄️ Complete SQL Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>🗄️ Complete SQL – Manage & Query Data Like a Pro</h2>
+        <p>SQL (Structured Query Language) is the standard language for relational databases. This course covers everything: SELECT, filtering, sorting, joins, aggregations, subqueries, indexes, transactions, stored procedures, and more. Clear examples for MySQL/PostgreSQL. Let's master data!</p>
+    </div>
+
+    <!-- SECTION 1: SQL Basics -->
+    <h2 class="section-title">📖 1. SQL Fundamentals</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 What is SQL?</h3><div class="explain">SQL is used to communicate with databases. Popular DBMS: MySQL, PostgreSQL, SQLite, SQL Server, Oracle.</div></div>
+        <div class="card"><h3>🔹 Database, Table, Record</h3><div class="explain">Database contains tables. Tables have rows (records) and columns (fields). Primary key uniquely identifies each row.</div></div>
+        <div class="card"><h3>🔹 Creating a Database & Table</h3><div class="code-block">CREATE DATABASE school;<br>USE school;<br><br>CREATE TABLE students (<br>    id INT PRIMARY KEY AUTO_INCREMENT,<br>    name VARCHAR(100) NOT NULL,<br>    age INT,<br>    grade VARCHAR(2)<br>);</div></div>
+    </div>
+
+    <!-- SECTION 2: CRUD Operations -->
+    <h2 class="section-title">✍️ 2. CRUD Operations</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 INSERT – Add Data</h3><div class="code-block">INSERT INTO students (name, age, grade)<br>VALUES ('Alice', 20, 'A'), ('Bob', 22, 'B');</div></div>
+        <div class="card"><h3>🔹 SELECT – Read Data</h3><div class="code-block">SELECT * FROM students;<br>SELECT name, age FROM students WHERE age > 20;</div></div>
+        <div class="card"><h3>🔹 UPDATE – Modify Data</h3><div class="code-block">UPDATE students SET grade = 'A+' WHERE name = 'Alice';</div></div>
+        <div class="card"><h3>🔹 DELETE – Remove Data</h3><div class="code-block">DELETE FROM students WHERE id = 2;<br>-- DELETE without WHERE removes all rows</div></div>
+    </div>
+
+    <!-- SECTION 3: Filtering & Sorting -->
+    <h2 class="section-title">🔍 3. Filtering & Sorting</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 WHERE Clause</h3><div class="code-block">SELECT * FROM products<br>WHERE price > 100 AND category = 'Electronics';<br><br>Operators: =, <>, >, <, >=, <=, BETWEEN, LIKE, IN</div></div>
+        <div class="card"><h3>🔹 LIKE & Wildcards</h3><div class="code-block">SELECT * FROM users WHERE name LIKE 'J%';   -- starts with J<br>SELECT * FROM users WHERE email LIKE '%@gmail.com';</div></div>
+        <div class="card"><h3>🔹 ORDER BY</h3><div class="code-block">SELECT * FROM products ORDER BY price DESC, name ASC;</div></div>
+        <div class="card"><h3>🔹 LIMIT & OFFSET</h3><div class="code-block">SELECT * FROM orders LIMIT 10 OFFSET 20;  -- pagination</div></div>
+    </div>
+
+    <!-- SECTION 4: Functions & Aggregations -->
+    <h2 class="section-title">📊 4. Aggregate Functions & Grouping</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Aggregate Functions</h3><div class="code-block">SELECT COUNT(*) FROM students;<br>SELECT AVG(price), MAX(price), MIN(price), SUM(quantity) FROM sales;</div></div>
+        <div class="card"><h3>🔹 GROUP BY</h3><div class="code-block">SELECT category, COUNT(*) as product_count<br>FROM products<br>GROUP BY category;</div></div>
+        <div class="card"><h3>🔹 HAVING (filter groups)</h3><div class="code-block">SELECT category, AVG(price) as avg_price<br>FROM products<br>GROUP BY category<br>HAVING avg_price > 50;</div></div>
+    </div>
+
+    <!-- SECTION 5: Joins -->
+    <h2 class="section-title">🔗 5. Joins – Combining Tables</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 INNER JOIN</h3><div class="code-block">SELECT orders.id, customers.name<br>FROM orders<br>INNER JOIN customers ON orders.customer_id = customers.id;</div><div class="explain">Returns rows with match in both tables.</div></div>
+        <div class="card"><h3>🔹 LEFT JOIN (RIGHT JOIN)</h3><div class="code-block">SELECT customers.name, orders.total<br>FROM customers<br>LEFT JOIN orders ON customers.id = orders.customer_id;</div><div class="explain">All rows from left table, matching from right (NULL if none).</div></div>
+        <div class="card"><h3>🔹 FULL OUTER JOIN</h3><div class="code-block">-- MySQL doesn't support directly; use UNION of LEFT and RIGHT JOIN</div></div>
+        <div class="card"><h3>🔹 SELF JOIN</h3><div class="code-block">SELECT e1.name AS employee, e2.name AS manager<br>FROM employees e1<br>LEFT JOIN employees e2 ON e1.manager_id = e2.id;</div></div>
+    </div>
+
+    <!-- SECTION 6: Subqueries -->
+    <h2 class="section-title">📦 6. Subqueries & Nested Queries</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Subquery in WHERE</h3><div class="code-block">SELECT name, salary<br>FROM employees<br>WHERE salary > (SELECT AVG(salary) FROM employees);</div></div>
+        <div class="card"><h3>🔹 Subquery with IN</h3><div class="code-block">SELECT name FROM customers<br>WHERE id IN (SELECT customer_id FROM orders WHERE total > 100);</div></div>
+        <div class="card"><h3>🔹 EXISTS / NOT EXISTS</h3><div class="code-block">SELECT name FROM products p<br>WHERE EXISTS (SELECT 1 FROM inventory i WHERE i.product_id = p.id);</div></div>
+        <div class="card"><h3>🔹 Subquery in SELECT (scalar)</h3><div class="code-block">SELECT name,<br>    (SELECT AVG(salary) FROM employees) as company_avg<br>FROM employees;</div></div>
+    </div>
+
+    <!-- SECTION 7: Set Operations -->
+    <h2 class="section-title">🔄 7. Set Operations</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 UNION & UNION ALL</h3><div class="code-block">SELECT name FROM employees<br>UNION<br>SELECT name FROM contractors;<br>-- UNION removes duplicates, UNION ALL keeps all</div></div>
+        <div class="card"><h3>🔹 INTERSECT & EXCEPT (MINUS)</h3><div class="code-block">-- INTERSECT: common rows<br>-- EXCEPT: rows in first not in second</div></div>
+    </div>
+
+    <!-- SECTION 8: Indexes & Performance -->
+    <h2 class="section-title">⚡ 8. Indexes & Query Optimization</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Creating Indexes</h3><div class="code-block">CREATE INDEX idx_name ON students (name);<br>CREATE UNIQUE INDEX idx_email ON users (email);<br>DROP INDEX idx_name ON students;</div><div class="explain">Indexes speed up SELECT but slow INSERT/UPDATE/DELETE.</div></div>
+        <div class="card"><h3>🔹 EXPLAIN Query Plan</h3><div class="code-block">EXPLAIN SELECT * FROM orders WHERE customer_id = 5;</div></div>
+    </div>
+
+    <!-- SECTION 9: Constraints & Relationships -->
+    <h2 class="section-title">🔒 9. Constraints & Keys</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 PRIMARY KEY & FOREIGN KEY</h3><div class="code-block">CREATE TABLE orders (<br>    id INT PRIMARY KEY,<br>    customer_id INT,<br>    FOREIGN KEY (customer_id) REFERENCES customers(id)<br>);</div></div>
+        <div class="card"><h3>🔹 UNIQUE, NOT NULL, CHECK</h3><div class="code-block">CREATE TABLE users (<br>    username VARCHAR(50) UNIQUE,<br>    email VARCHAR(100) NOT NULL,<br>    age INT CHECK (age >= 18)<br>);</div></div>
+    </div>
+
+    <!-- SECTION 10: Advanced SQL -->
+    <h2 class="section-title">🚀 10. Advanced Topics</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Views (Virtual Tables)</h3><div class="code-block">CREATE VIEW active_users AS<br>SELECT id, name FROM users WHERE status = 'active';<br>-- Use like a table: SELECT * FROM active_users;</div></div>
+        <div class="card"><h3>🔹 Stored Procedures</h3><div class="code-block">DELIMITER //<br>CREATE PROCEDURE GetUsersByAge(IN min_age INT)<br>BEGIN<br>    SELECT * FROM users WHERE age >= min_age;<br>END //<br>CALL GetUsersByAge(18);</div></div>
+        <div class="card"><h3>🔹 Transactions (ACID)</h3><div class="code-block">START TRANSACTION;<br>UPDATE accounts SET balance = balance - 100 WHERE id = 1;<br>UPDATE accounts SET balance = balance + 100 WHERE id = 2;<br>COMMIT;  -- or ROLLBACK if error</div><div class="explain">Ensures data integrity. COMMIT saves changes, ROLLBACK undoes.</div></div>
+        <div class="card"><h3>🔹 Window Functions (ROW_NUMBER, RANK)</h3><div class="code-block">SELECT name, salary,<br>    ROW_NUMBER() OVER (ORDER BY salary DESC) as rank<br>FROM employees;<br><br>SELECT department, name, salary,<br>    RANK() OVER (PARTITION BY department ORDER BY salary DESC) as dept_rank<br>FROM employees;</div></div>
+        <div class="card"><h3>🔹 Common Table Expressions (CTE)</h3><div class="code-block">WITH high_salary AS (<br>    SELECT * FROM employees WHERE salary > 50000<br>)<br>SELECT * FROM high_salary WHERE department = 'IT';</div></div>
+        <div class="card"><h3>🔹 Triggers</h3><div class="code-block">CREATE TRIGGER update_timestamp<br>BEFORE UPDATE ON users<br>FOR EACH ROW<br>SET NEW.updated_at = NOW();</div></div>
+    </div>
+
+    <!-- SECTION 11: Data Types & Functions -->
+    <h2 class="section-title">🔧 11. Common Data Types & Functions</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Numeric & String Types</h3><div class="code-block">INT, DECIMAL(10,2), VARCHAR(255), TEXT, DATE, DATETIME, BOOLEAN</div></div>
+        <div class="card"><h3>🔹 String Functions</h3><div class="code-block">UPPER(), LOWER(), CONCAT(), SUBSTRING(), LENGTH(), TRIM(), REPLACE()</div></div>
+        <div class="card"><h3>🔹 Date Functions</h3><div class="code-block">NOW(), CURDATE(), DATE_ADD(), DATEDIFF(), YEAR(), MONTH()</div></div>
+    </div>
+
+    <!-- Cheat Sheet & Summary -->
+    <hr>
+    <div style="background: #e0f2fe; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 SQL Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Query Order</strong><br>SELECT → FROM → JOIN → WHERE → GROUP BY → HAVING → ORDER BY → LIMIT</div>
+            <div><strong>🔹 Common Joins</strong><br>INNER, LEFT, RIGHT, FULL, SELF</div>
+            <div><strong>🔹 Aggregates</strong><br>COUNT, SUM, AVG, MIN, MAX</div>
+            <div><strong>🔹 Constraints</strong><br>PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK, DEFAULT</div>
+            <div><strong>🔹 Transaction</strong><br>START TRANSACTION, COMMIT, ROLLBACK, SAVEPOINT</div>
+            <div><strong>🔹 Wildcards</strong><br>% (any characters), _ (single character)</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Always use indexes on columns used in WHERE, JOIN, ORDER BY. Prefer JOINs over subqueries when possible. Use EXPLAIN to analyze queries. Normalize data to reduce redundancy but denormalize for performance when needed.
+        </div>
+    </div>
+
+    <!-- Final Projects & Practice -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Practice SQL with These Projects</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Library Management System – tables for books, members, loans (joins, aggregations)</li>
+            <li>E-commerce Database – customers, orders, products, order_items (complex joins, subqueries)</li>
+            <li>Employee Salary Analyzer – departments, employees, salaries (window functions, CTE)</li>
+            <li>Movie Rental Database – analyze popular genres, customer spending</li>
+            <li>Banking Transactions – implement transfer with transactions</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Next Steps:</strong> Practice on platforms like LeetCode, HackerRank. Learn database design (normalization, ER diagrams). Explore NoSQL databases. You now have a complete SQL roadmap – master data management!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🗄️ Complete SQL Course – From queries to database mastery.<br>
+    Click "Home" to return to main website. Happy querying!</p>
+</footer>
+
+</body>
+</html>

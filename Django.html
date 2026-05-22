@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete Django Course | Web Framework Mastery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f4faf7;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #1b4d3e;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #dcfce7;
+            border-left: 8px solid #0d9488;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #115e59;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #0f766e;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #0d9488;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #dfe9f3;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #0f766e;
+            border-bottom: 3px solid #bcd9f0;
+            display: inline-block;
+        }
+
+        footer {
+            background: #e2efe9;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #1f4e44;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 Course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">🎯 Complete Django Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>🎯 Complete Django – Build Web Apps Quickly</h2>
+        <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. This course covers everything: setup, models, views, templates, URLs, forms, authentication, admin, and deployment. Let's build real web apps!</p>
+    </div>
+
+    <!-- SECTION 1: Introduction & Setup -->
+    <h2 class="section-title">🚀 1. Django Fundamentals & Setup</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 What is Django?</h3><div class="explain">MVT pattern (Model-View-Template). Batteries-included: ORM, auth, admin, forms, security. Used by Instagram, Pinterest, Disqus.</div></div>
+        <div class="card"><h3>🔹 Installation & Project Setup</h3><div class="code-block">pip install django<br>django-admin startproject myproject<br>cd myproject<br>python manage.py runserver</div><div class="explain">Creates project structure. Settings, urls, wsgi. Run server at localhost:8000.</div></div>
+        <div class="card"><h3>🔹 Creating an App</h3><div class="code-block">python manage.py startapp blog<br># Add 'blog' to INSTALLED_APPS in settings.py</div><div class="explain">Apps are reusable modules. Each app has models, views, templates.</div></div>
+    </div>
+
+    <!-- SECTION 2: Models & Database -->
+    <h2 class="section-title">🗄️ 2. Models & Database (ORM)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Defining Models</h3><div class="code-block">from django.db import models<br><br>class Post(models.Model):<br>    title = models.CharField(max_length=200)<br>    content = models.TextField()<br>    created_at = models.DateTimeField(auto_now_add=True)<br>    def __str__(self): return self.title</div><div class="explain">Each model is a Python class that maps to a database table.</div></div>
+        <div class="card"><h3>🔹 Migrations</h3><div class="code-block">python manage.py makemigrations<br>python manage.py migrate</div><div class="explain">makemigrations creates migration files. migrate applies them to DB.</div></div>
+        <div class="card"><h3>🔹 Querying Data (ORM)</h3><div class="code-block">Post.objects.all()<br>Post.objects.filter(title__icontains="hello")<br>post = Post.objects.get(id=1)<br>post.save()<br>post.delete()</div><div class="explain">CRUD operations. Filters, get, create, update, delete.</div></div>
+        <div class="card"><h3>🔹 Relationships</h3><div class="code-block">class Comment(models.Model):<br>    post = models.ForeignKey(Post, on_delete=models.CASCADE)<br>    author = models.CharField(max_length=100)<br><br>class Profile(models.Model):<br>    user = models.OneToOneField(User, on_delete=models.CASCADE)<br><br>class Tag(models.Model):<br>    posts = models.ManyToManyField(Post)</div><div class="explain">ForeignKey (many-to-one), OneToOneField, ManyToManyField.</div></div>
+    </div>
+
+    <!-- SECTION 3: Views & URLs -->
+    <h2 class="section-title">🌐 3. Views & URL Routing</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Function-Based Views (FBV)</h3><div class="code-block">from django.shortcuts import render<br>from .models import Post<br><br>def post_list(request):<br>    posts = Post.objects.all()<br>    return render(request, 'blog/post_list.html', {'posts': posts})</div><div class="explain">View takes request, returns HttpResponse or render template.</div></div>
+        <div class="card"><h3>🔹 Class-Based Views (CBV)</h3><div class="code-block">from django.views.generic import ListView, DetailView<br><br>class PostListView(ListView):<br>    model = Post<br>    template_name = 'blog/post_list.html'<br>    context_object_name = 'posts'</div><div class="explain">Powerful built-in generic views: ListView, DetailView, CreateView, UpdateView, DeleteView.</div></div>
+        <div class="card"><h3>🔹 URL Configuration</h3><div class="code-block"># urls.py in app<br>from django.urls import path<br>from . import views<br><br>urlpatterns = [<br>    path('', views.post_list, name='post_list'),<br>    path('post/&lt;int:pk&gt;/', views.post_detail, name='post_detail'),<br>]</div><div class="explain">Map URLs to view functions. Named URLs for reverse().</div></div>
+        <div class="card"><h3>🔹 Including Project URLs</h3><div class="code-block"># project/urls.py<br>from django.contrib import admin<br>from django.urls import path, include<br><br>urlpatterns = [<br>    path('admin/', admin.site.urls),<br>    path('blog/', include('blog.urls')),<br>]</div><div class="explain">Include app URLs. Namespacing with app_name.</div></div>
+    </div>
+
+    <!-- SECTION 4: Templates & Static Files -->
+    <h2 class="section-title">🎨 4. Templates & Static Files</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Template Language</h3><div class="code-block">&lt;h1&gt;{{ post.title }}&lt;/h1&gt;<br>&lt;p&gt;{{ post.content|truncatewords:30 }}&lt;/p&gt;<br>{% if user.is_authenticated %}<br>  Hello {{ user.username }}<br>{% endif %}<br>{% for post in posts %}<br>  &lt;li&gt;{{ post.title }}&lt;/li&gt;<br>{% endfor %}</div><div class="explain">Variables {{ }}, tags {% %}, filters {{ value|filter }}. Inheritance with {% extends %} and {% block %}.</div></div>
+        <div class="card"><h3>🔹 Template Inheritance</h3><div class="code-block">&lt;!-- base.html --&gt;<br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;&lt;title&gt;{% block title %}My Site{% endblock %}&lt;/title&gt;&lt;/head&gt;<br>&lt;body&gt;{% block content %}{% endblock %}&lt;/body&gt;<br>&lt;/html&gt;<br><br>&lt;!-- child.html --&gt;<br>{% extends "base.html" %}<br>{% block content %}...{% endblock %}</div><div class="explain">DRY templates. Blocks can be overridden.</div></div>
+        <div class="card"><h3>🔹 Static Files (CSS, JS, Images)</h3><div class="code-block"># settings.py<br>STATIC_URL = '/static/'<br>STATICFILES_DIRS = [BASE_DIR / "static"]<br><br># template<br>{% load static %}<br>&lt;link rel="stylesheet" href="{% static 'css/style.css' %}"&gt;</div><div class="explain">Collect static files for production. Media for user uploads.</div></div>
+    </div>
+
+    <!-- SECTION 5: Forms & ModelForms -->
+    <h2 class="section-title">📝 5. Forms & ModelForms</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Creating Forms</h3><div class="code-block">from django import forms<br><br>class ContactForm(forms.Form):<br>    name = forms.CharField(max_length=100)<br>    email = forms.EmailField()<br>    message = forms.CharField(widget=forms.Textarea)</div><div class="explain">HTML form rendering, validation, CSRF protection.</div></div>
+        <div class="card"><h3>🔹 ModelForm</h3><div class="code-block">from django.forms import ModelForm<br>from .models import Post<br><br>class PostForm(ModelForm):<br>    class Meta:<br>        model = Post<br>        fields = ['title', 'content']</div><div class="explain">Automatically generate form from model. Saves time.</div></div>
+        <div class="card"><h3>🔹 Handling Form in View</h3><div class="code-block">def create_post(request):<br>    if request.method == 'POST':<br>        form = PostForm(request.POST)<br>        if form.is_valid():<br>            form.save()<br>            return redirect('post_list')<br>    else:<br>        form = PostForm()<br>    return render(request, 'blog/post_form.html', {'form': form})</div><div class="explain">GET shows empty form. POST validates and saves.</div></div>
+    </div>
+
+    <!-- SECTION 6: Authentication & Authorization -->
+    <h2 class="section-title">🔐 6. Authentication System</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Built-in User Model</h3><div class="code-block">from django.contrib.auth.models import User<br>user = User.objects.create_user(username='john', password='secret')</div><div class="explain">User model with username, password, email, etc.</div></div>
+        <div class="card"><h3>🔹 Login, Logout, Registration</h3><div class="code-block">from django.contrib.auth import login, logout, authenticate<br>from django.contrib.auth.forms import UserCreationForm<br><br># Login view<br>user = authenticate(request, username=username, password=password)<br>if user: login(request, user)<br># Logout<br>logout(request)</div><div class="explain">Use built-in auth views or create custom.</div></div>
+        <div class="card"><h3>🔹 Protecting Views</h3><div class="code-block">from django.contrib.auth.decorators import login_required<br><br>@login_required<br>def profile(request):<br>    return render(request, 'profile.html')</div><div class="explain">Require login. Also use LoginRequiredMixin for CBV.</div></div>
+        <div class="card"><h3>🔹 User Groups & Permissions</h3><div class="code-block">user.groups.add(group)<br>user.has_perm('app.can_publish')<br>@permission_required('app.can_publish')</div><div class="explain">Fine-grained access control.</div></div>
+    </div>
+
+    <!-- SECTION 7: Admin Interface -->
+    <h2 class="section-title">👑 7. Django Admin</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Registering Models</h3><div class="code-block"># admin.py<br>from django.contrib import admin<br>from .models import Post<br><br>admin.site.register(Post)</div><div class="explain">Superuser: python manage.py createsuperuser. Access /admin.</div></div>
+        <div class="card"><h3>🔹 Customizing Admin</h3><div class="code-block">@admin.register(Post)<br>class PostAdmin(admin.ModelAdmin):<br>    list_display = ('title', 'created_at', 'author')<br>    list_filter = ('created_at',)<br>    search_fields = ('title', 'content')<br>    prepopulated_fields = {'slug': ('title',)}</div><div class="explain">Custom list view, filters, search, inline editing.</div></div>
+    </div>
+
+    <!-- SECTION 8: Advanced Features -->
+    <h2 class="section-title">⚡ 8. Advanced Django Topics</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Class-Based Views (Detail, Create, Update, Delete)</h3><div class="code-block">from django.views.generic.edit import CreateView, UpdateView, DeleteView<br>from django.urls import reverse_lazy<br><br>class PostCreateView(CreateView):<br>    model = Post<br>    fields = ['title', 'content']<br>    success_url = reverse_lazy('post_list')</div><div class="explain">Generic editing views with automatic form handling.</div></div>
+        <div class="card"><h3>🔹 Middleware</h3><div class="code-block">class SimpleMiddleware:<br>    def __init__(self, get_response):<br>        self.get_response = get_response<br>    def __call__(self, request):<br>        # request preprocessing<br>        response = self.get_response(request)<br>        # response postprocessing<br>        return response</div><div class="explain">Intercept request/response. Built-in: authentication, security, session.</div></div>
+        <div class="card"><h3>🔹 Signals</h3><div class="code-block">from django.db.models.signals import post_save<br>from django.dispatch import receiver<br><br>@receiver(post_save, sender=User)<br>def create_profile(sender, instance, created, **kwargs):<br>    if created:<br>        Profile.objects.create(user=instance)</div><div class="explain">Allow decoupled applications to get notified when actions occur.</div></div>
+        <div class="card"><h3>🔹 Pagination</h3><div class="code-block">from django.core.paginator import Paginator<br><br>posts = Post.objects.all()<br>paginator = Paginator(posts, 10)<br>page_number = request.GET.get('page')<br>page_obj = paginator.get_page(page_number)</div><div class="explain">Split large querysets into pages.</div></div>
+    </div>
+
+    <!-- SECTION 9: Deployment & Best Practices -->
+    <h2 class="section-title">🚀 9. Deployment & Production</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Settings for Production</h3><div class="code-block">DEBUG = False<br>ALLOWED_HOSTS = ['yourdomain.com']<br>DATABASES = { 'default': { 'ENGINE': 'django.db.backends.postgresql', ... } }<br>STATIC_ROOT = BASE_DIR / 'staticfiles'</div><div class="explain">Disable debug, set allowed hosts, use PostgreSQL, collectstatic.</div></div>
+        <div class="card"><h3>🔹 Environment Variables</h3><div class="code-block">import os<br>SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')<br># Use python-decouple or django-environ</div><div class="explain">Never hardcode secrets. Use env variables.</div></div>
+        <div class="card"><h3>🔹 Deploy with Gunicorn & Nginx</h3><div class="code-block">pip install gunicorn<br>gunicorn myproject.wsgi:application<br><br># Nginx reverse proxy config<br># serve static files via Nginx</div><div class="explain">WSGI server + web server. Use whitenoise for static files.</div></div>
+        <div class="card"><h3>🔹 Debugging & Logging</h3><div class="code-block">import logging<br>logger = logging.getLogger(__name__)<br>logger.error("Something went wrong")</div><div class="explain">Log errors, use Django Debug Toolbar for development.</div></div>
+    </div>
+
+    <!-- SECTION 10: REST API with Django REST Framework -->
+    <h2 class="section-title">📡 10. Django REST Framework (DRF)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Installation & Serializers</h3><div class="code-block">pip install djangorestframework<br><br>from rest_framework import serializers<br>class PostSerializer(serializers.ModelSerializer):<br>    class Meta:<br>        model = Post<br>        fields = ['id', 'title', 'content']</div><div class="explain">Convert models to JSON/XML for APIs.</div></div>
+        <div class="card"><h3>🔹 API Views & Routers</h3><div class="code-block">from rest_framework.viewsets import ModelViewSet<br><br>class PostViewSet(ModelViewSet):<br>    queryset = Post.objects.all()<br>    serializer_class = PostSerializer<br><br># router registers URLs automatically</div><div class="explain">CRUD API endpoints with minimal code. Browsable API.</div></div>
+    </div>
+
+    <!-- Cheat Sheet & Summary -->
+    <hr>
+    <div style="background: #dcfce7; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 Django Cheat Sheet – Quick Commands & Concepts</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Commands</strong><br>startproject, startapp, makemigrations, migrate, createsuperuser, runserver, shell</div>
+            <div><strong>🔹 Core Components</strong><br>Models, Views, Templates, URLs, Forms, Admin, Auth</div>
+            <div><strong>🔹 ORM</strong><br>objects.all(), filter(), get(), create(), save(), delete(), exclude(), order_by()</div>
+            <div><strong>🔹 Template Tags</strong><br>{% for %}, {% if %}, {% block %}, {% extends %}, {% url %}, {% load static %}</div>
+            <div><strong>🔹 Views</strong><br>FBV, CBV (ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView)</div>
+            <div><strong>🔹 Auth</strong><br>login_required, LoginRequiredMixin, authenticate, login, logout, UserCreationForm</div>
+            <div><strong>🔹 Forms</strong><br>forms.Form, ModelForm, is_valid(), cleaned_data, save()</div>
+            <div><strong>🔹 Deployment</strong><br>DEBUG=False, ALLOWED_HOSTS, collectstatic, Gunicorn, Nginx, env variables</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Follow Django's "batteries-included" philosophy. Use class-based views for CRUD, function-based for custom logic. Always define __str__ on models. Use Django debug toolbar. Keep settings modular. Write tests! (unittest or pytest-django).
+        </div>
+    </div>
+
+    <!-- Final Projects -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Build These Django Projects</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Blog platform with comments, categories, and user profiles</li>
+            <li>To-do list with user authentication and CRUD</li>
+            <li>E-commerce product catalog with shopping cart (sessions)</li>
+            <li>Polling app (like Django's tutorial) with charts</li>
+            <li>Social media clone with posts, likes, and followers</li>
+            <li>REST API backend for a React/Vue frontend (DRF)</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>You now have a complete Django roadmap!</strong> Start with the official tutorial, then build projects. Django's community is huge – you'll love it. Happy coding!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🎯 Complete Django Course – Master Web Development with Python.<br>
+    Click "Home" to return to main website. Build amazing web apps with Django!</p>
+</footer>
+
+</body>
+</html>

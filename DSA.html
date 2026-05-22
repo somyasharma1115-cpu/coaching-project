@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete DSA Course | Data Structures & Algorithms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fefaf0;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #2d3a3f;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #feedd9;
+            border-left: 8px solid #d97706;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #b45309;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #b45309;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #d97706;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #e8f0f5;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #b45309;
+            border-bottom: 3px solid #fad7a0;
+            display: inline-block;
+        }
+
+        footer {
+            background: #e2dfd3;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #2d2b1f;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">📚 Complete DSA Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>📚 Complete Data Structures & Algorithms</h2>
+        <p>DSA is the heart of programming. This course covers every essential topic: arrays, linked lists, stacks, queues, trees, graphs, sorting, searching, recursion, dynamic programming, and more. Each concept is explained simply with code examples (Python). Master DSA to crack coding interviews and build efficient software.</p>
+    </div>
+
+    <!-- SECTION 1: Complexity Analysis -->
+    <h2 class="section-title">⏱️ 1. Complexity Analysis (Big O)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Time & Space Complexity</h3><div class="explain">Big O notation describes how runtime grows with input size. Common complexities: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n), O(n²) quadratic, O(2^n) exponential.</div><div class="code-block"># O(1) – constant time<br>def get_first(arr): return arr[0]<br><br># O(n) – linear<br>def find_max(arr):<br>    max_val = arr[0]<br>    for x in arr: max_val = max(max_val, x)<br>    return max_val</div></div>
+    </div>
+
+    <!-- SECTION 2: Arrays & Strings -->
+    <h2 class="section-title">📊 2. Arrays & Strings</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Array Operations</h3><div class="code-block">arr = [1,2,3,4,5]<br>arr.append(6)        # O(1)<br>arr.pop()            # O(1)<br>arr.insert(0, 99)    # O(n)<br>arr.remove(3)        # O(n)<br>print(arr[2])        # O(1) random access</div><div class="explain">Contiguous memory. Fast access (O(1)), slow insert/delete in middle (O(n)).</div></div>
+        <div class="card"><h3>🔹 Two Pointers & Sliding Window</h3><div class="code-block"># Two pointers – reverse array<br>left, right = 0, len(arr)-1<br>while left < right:<br>    arr[left], arr[right] = arr[right], arr[left]<br>    left += 1; right -= 1</div><div class="explain">Techniques for subarray problems: sliding window for sums, two-pointer for pairs.</div></div>
+        <div class="card"><h3>🔹 String Manipulation</h3><div class="code-block">s = "hello"<br>s.upper(), s.lower()<br>s.split()<br>''.join(reversed(s))<br>s[1:4]  # slice</div><div class="explain">Strings are immutable in Python. Use list of chars for modifications.</div></div>
+    </div>
+
+    <!-- SECTION 3: Linked Lists -->
+    <h2 class="section-title">🔗 3. Linked Lists</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Singly Linked List</h3><div class="code-block">class Node:<br>    def __init__(self, val):<br>        self.val = val<br>        self.next = None<br><br># Insert at head: O(1)<br># Insert at tail: O(n)<br># Delete node: O(n) to find</div><div class="explain">Dynamic size, no contiguous memory. Fast insert/delete at ends, slow random access.</div></div>
+        <div class="card"><h3>🔹 Doubly Linked List</h3><div class="code-block">class DNode:<br>    def __init__(self, val):<br>        self.val = val<br>        self.prev = None<br>        self.next = None</div><div class="explain">Each node has prev pointer. Easier to traverse backward.</div></div>
+        <div class="card"><h3>🔹 Common Operations</h3><div class="code-block"># Reverse linked list<br>def reverse(head):<br>    prev = None<br>    curr = head<br>    while curr:<br>        nxt = curr.next<br>        curr.next = prev<br>        prev = curr<br>        curr = nxt<br>    return prev</div><div class="explain">Detect cycle (Floyd's cycle detection). Find middle node.</div></div>
+    </div>
+
+    <!-- SECTION 4: Stacks & Queues -->
+    <h2 class="section-title">📦 4. Stacks & Queues</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Stack (LIFO)</h3><div class="code-block">stack = []          # list as stack<br>stack.append(1)     # push<br>top = stack.pop()   # pop<br>peek = stack[-1]    # O(1)</div><div class="explain">Used for undo/redo, expression evaluation, DFS, backtracking.</div></div>
+        <div class="card"><h3>🔹 Queue (FIFO)</h3><div class="code-block">from collections import deque<br>q = deque()<br>q.append(1)         # enqueue<br>first = q.popleft() # dequeue O(1)</div><div class="explain">Used in BFS, task scheduling, print spooler.</div></div>
+        <div class="card"><h3>🔹 Monotonic Stack/Queue</h3><div class="explain">Maintain increasing/decreasing order. Used for next greater element, sliding window max.</div></div>
+    </div>
+
+    <!-- SECTION 5: Recursion & Backtracking -->
+    <h2 class="section-title">🔄 5. Recursion & Backtracking</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Recursion Fundamentals</h3><div class="code-block">def factorial(n):<br>    if n <= 1: return 1<br>    return n * factorial(n-1)</div><div class="explain">Base case + recursive call. Stack usage, risk of stack overflow.</div></div>
+        <div class="card"><h3>🔹 Backtracking</h3><div class="code-block"># Generate all subsets (backtracking)<br>def subsets(nums):<br>    result = []<br>    def backtrack(start, path):<br>        result.append(path[:])<br>        for i in range(start, len(nums)):<br>            path.append(nums[i])<br>            backtrack(i+1, path)<br>            path.pop()<br>    backtrack(0, [])<br>    return result</div><div class="explain">Try all possibilities, undo (backtrack) when stuck. Used in N-Queens, permutations, subsets.</div></div>
+    </div>
+
+    <!-- SECTION 6: Sorting Algorithms -->
+    <h2 class="section-title">🔢 6. Sorting Algorithms</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Bubble, Insertion, Selection</h3><div class="code-block"># Bubble sort O(n²)<br>for i in range(n):<br>    for j in range(0, n-i-1):<br>        if arr[j] > arr[j+1]:<br>            arr[j], arr[j+1] = arr[j+1], arr[j]</div><div class="explain">Simple but inefficient for large data.</div></div>
+        <div class="card"><h3>🔹 Merge Sort (Divide & Conquer)</h3><div class="code-block">def merge_sort(arr):<br>    if len(arr) <= 1: return arr<br>    mid = len(arr)//2<br>    left = merge_sort(arr[:mid])<br>    right = merge_sort(arr[mid:])<br>    return merge(left, right)</div><div class="explain">O(n log n) time, O(n) space. Stable sort.</div></div>
+        <div class="card"><h3>🔹 Quick Sort</h3><div class="code-block">def quick_sort(arr):<br>    if len(arr) <= 1: return arr<br>    pivot = arr[0]<br>    left = [x for x in arr[1:] if x <= pivot]<br>    right = [x for x in arr[1:] if x > pivot]<br>    return quick_sort(left) + [pivot] + quick_sort(right)</div><div class="explain">Average O(n log n), worst O(n²) if bad pivot.</div></div>
+        <div class="card"><h3>🔹 Heap Sort & Counting Sort</h3><div class="explain">Heap sort: O(n log n), in-place. Counting sort: O(n+k) for small integer range.</div></div>
+    </div>
+
+    <!-- SECTION 7: Searching Algorithms -->
+    <h2 class="section-title">🔍 7. Searching Algorithms</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Linear Search</h3><div class="code-block">for i in range(len(arr)):<br>    if arr[i] == target: return i<br>return -1  # O(n)</div></div>
+        <div class="card"><h3>🔹 Binary Search (on sorted array)</h3><div class="code-block">def binary_search(arr, target):<br>    left, right = 0, len(arr)-1<br>    while left <= right:<br>        mid = (left+right)//2<br>        if arr[mid] == target: return mid<br>        elif arr[mid] < target: left = mid+1<br>        else: right = mid-1<br>    return -1  # O(log n)</div><div class="explain">Divide and conquer. Requires sorted input.</div></div>
+        <div class="card"><h3>🔹 Ternary Search & Exponential Search</h3><div class="explain">Ternary search for unimodal functions. Exponential search for unbounded arrays.</div></div>
+    </div>
+
+    <!-- SECTION 8: Trees -->
+    <h2 class="section-title">🌳 8. Trees</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Binary Tree & Traversals</h3><div class="code-block">class TreeNode:<br>    def __init__(self, val):<br>        self.val = val<br>        self.left = None<br>        self.right = None<br><br># Inorder: left, root, right<br># Preorder: root, left, right<br># Postorder: left, right, root</div><div class="explain">DFS traversals: recursive or stack. BFS: level order using queue.</div></div>
+        <div class="card"><h3>🔹 Binary Search Tree (BST)</h3><div class="code-block">def insert(root, val):<br>    if not root: return TreeNode(val)<br>    if val < root.val: root.left = insert(root.left, val)<br>    else: root.right = insert(root.right, val)<br>    return root</div><div class="explain">Left child < parent < right child. O(log n) average for search/insert.</div></div>
+        <div class="card"><h3>🔹 Balanced Trees (AVL, Red-Black)</h3><div class="explain">Self-balancing. AVL: strict height balance (log n). Red-Black: used in C++ map, Java TreeMap.</div></div>
+        <div class="card"><h3>🔹 Heap (Priority Queue)</h3><div class="code-block">import heapq<br>heap = [3,1,4]<br>heapq.heapify(heap)   # min-heap<br>heapq.heappush(heap, 2)<br>smallest = heapq.heappop(heap)</div><div class="explain">Complete binary tree. O(log n) push/pop. Used in Dijkstra, heap sort.</div></div>
+        <div class="card"><h3>🔹 Trie (Prefix Tree)</h3><div class="explain">Efficient for word storage & prefix search. Used in autocomplete, spell checker.</div></div>
+    </div>
+
+    <!-- SECTION 9: Graphs -->
+    <h2 class="section-title">🌐 9. Graphs</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Representations</h3><div class="code-block"># Adjacency list – most common<br>graph = {0: [1,2], 1: [0,3], 2: [0], 3: [1]}<br># Adjacency matrix – dense graphs</div><div class="explain">Directed/Undirected, weighted/unweighted.</div></div>
+        <div class="card"><h3>🔹 BFS & DFS</h3><div class="code-block">from collections import deque<br>def bfs(graph, start):<br>    visited = set()<br>    q = deque([start])<br>    while q:<br>        node = q.popleft()<br>        if node not in visited:<br>            visited.add(node)<br>            q.extend(graph[node] - visited)</div><div class="explain">BFS: shortest path in unweighted. DFS: recursion or stack.</div></div>
+        <div class="card"><h3>🔹 Shortest Paths</h3><div class="code-block"># Dijkstra (non-negative weights)<br>import heapq<br>def dijkstra(graph, start):<br>    distances = {node: float('inf') for node in graph}<br>    distances[start] = 0<br>    pq = [(0, start)]<br>    while pq:<br>        dist, node = heapq.heappop(pq)<br>        for neighbor, weight in graph[node]:<br>            new_dist = dist + weight<br>            if new_dist < distances[neighbor]:<br>                distances[neighbor] = new_dist<br>                heapq.heappush(pq, (new_dist, neighbor))</div><div class="explain">Bellman-Ford (negative weights). Floyd-Warshall (all-pairs).</div></div>
+        <div class="card"><h3>🔹 Minimum Spanning Tree</h3><div class="explain">Kruskal (union-find) & Prim's algorithm.</div></div>
+        <div class="card"><h3>🔹 Topological Sort & Cycle Detection</h3><div class="explain">Kahn's algorithm (BFS) or DFS. Used in task scheduling.</div></div>
+    </div>
+
+    <!-- SECTION 10: Dynamic Programming -->
+    <h2 class="section-title">🧠 10. Dynamic Programming</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Memoization (Top-Down)</h3><div class="code-block">def fib(n, memo={}):<br>    if n in memo: return memo[n]<br>    if n <= 1: return n<br>    memo[n] = fib(n-1, memo) + fib(n-2, memo)<br>    return memo[n]</div><div class="explain">Store results of subproblems to avoid recomputation.</div></div>
+        <div class="card"><h3>🔹 Tabulation (Bottom-Up)</h3><div class="code-block">dp = [0]*(n+1)<br>dp[1] = 1<br>for i in range(2, n+1):<br>    dp[i] = dp[i-1] + dp[i-2]</div><div class="explain">Iterative, often more efficient. Base cases to final result.</div></div>
+        <div class="card"><h3>🔹 Classic DP Problems</h3><div class="explain">Knapsack, Longest Common Subsequence, Edit Distance, Coin Change, Maximum Subarray (Kadane's), House Robber, Climbing Stairs, etc.</div></div>
+    </div>
+
+    <!-- SECTION 11: Greedy Algorithms -->
+    <h2 class="section-title">💎 11. Greedy Algorithms</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Idea & Examples</h3><div class="explain">Make locally optimal choice at each step. Works for problems like activity selection, fractional knapsack, Huffman coding, Dijkstra's (greedy in essence).</div><div class="code-block"># Activity selection: choose earliest finishing times<br>activities.sort(key=lambda x: x[1])  # sort by end time</div></div>
+    </div>
+
+    <!-- SECTION 12: Hashing -->
+    <h2 class="section-title">🗝️ 12. Hashing & Hash Tables</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Dictionary / Set</h3><div class="code-block">d = {}<br>d['key'] = value<br>if 'key' in d: ...<br>s = set([1,2,3])<br>s.add(4)<br>s.remove(2)</div><div class="explain">O(1) average time for insert, delete, lookup. Collisions resolved via chaining or open addressing.</div></div>
+    </div>
+
+    <!-- Cheat Sheet & Summary -->
+    <hr>
+    <div style="background: #feedd9; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 DSA Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Data Structures</strong><br>Array/List, LinkedList, Stack, Queue, HashTable, Tree, Heap, Graph, Trie</div>
+            <div><strong>🔹 Time Complexities (common)</strong><br>Access: Array O(1), LinkedList O(n). Search: BST O(log n). Sort: O(n log n).</div>
+            <div><strong>🔹 Sorting</strong><br>Quick, Merge, Heap (n log n); Bubble, Insertion, Selection (n²); Counting (n+k).</div>
+            <div><strong>🔹 Graph Algorithms</strong><br>BFS/DFS (V+E), Dijkstra (E log V), Floyd-Warshall (V³), Kruskal (E log E).</div>
+            <div><strong>🔹 DP Patterns</strong><br>1D/2D DP, Knapsack, LCS, Kadane's, Matrix Chain.</div>
+            <div><strong>🔹 Techniques</strong><br>Two pointers, sliding window, recursion, backtracking, greedy, divide & conquer, memoization.</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Practice on LeetCode, HackerRank. Understand trade-offs (time vs space). Always analyze complexity before coding. Draw diagrams for linked lists/trees. Master recursion and DP patterns.
+        </div>
+    </div>
+
+    <!-- Final Projects / Practice -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Practice Problems (Start Here)</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Two Sum, Reverse Linked List, Valid Parentheses (Stack)</li>
+            <li>Binary Search, Merge Two Sorted Arrays</li>
+            <li>Maximum Subarray (Kadane's), Climbing Stairs (DP)</li>
+            <li>Invert Binary Tree, Level Order Traversal</li>
+            <li>Detect Cycle in Linked List, Find Middle of List</li>
+            <li>Implement Trie, DFS/BFS on Graph</li>
+            <li>Knapsack (0/1), Longest Palindromic Substring</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Next Steps:</strong> Implement each data structure from scratch. Solve 300+ problems on LeetCode. Understand patterns. You now have a complete DSA roadmap – master it and crack any coding interview!</p>
+    </div>
+</main>
+
+<footer>
+    <p>📚 Complete Data Structures & Algorithms Course – Master the foundation of efficient coding.<br>
+    Click "Home" to return to main website. Keep coding, keep learning!</p>
+</footer>
+
+</body>
+</html>

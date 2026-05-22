@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete Data Science Course | Python, Pandas, ML & More</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f9ff;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #1a3e50;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #e3f2fd;
+            border-left: 8px solid #0284c7;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #0c4a6e;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #1e5a7a;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #0284c7;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #dfe9f3;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #1e5a7a;
+            border-bottom: 3px solid #bcd9f0;
+            display: inline-block;
+        }
+
+        footer {
+            background: #e3edf5;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #1f4e6e;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 CourseHub</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">📊 Complete Data Science Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>📊 Complete Data Science – From Python to Machine Learning</h2>
+        <p>Data Science combines programming, statistics, and domain knowledge. This course covers Python, NumPy, Pandas, Matplotlib, Seaborn, statistics, data cleaning, and machine learning (scikit-learn). Every topic is explained simply with code examples. Let's unlock the power of data!</p>
+    </div>
+
+    <!-- SECTION 1: Python Basics for Data Science -->
+    <h2 class="section-title">🐍 1. Python Core for Data Science</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Variables & Data Types</h3><div class="code-block">age = 25           # int<br>price = 19.99      # float<br>name = "Alice"     # str<br>is_valid = True    # bool<br>my_list = [1,2,3]  # list<br>my_dict = {"a":1}  # dict</div><div class="explain">Python is dynamically typed. Lists are mutable, tuples immutable, dicts key-value.</div></div>
+        <div class="card"><h3>🔹 Control Flow & Loops</h3><div class="code-block">if score >= 60: print("Pass")<br>else: print("Fail")<br><br>for i in range(5):<br>    print(i)<br>while condition:<br>    do_something()</div><div class="explain">if/elif/else, for loops (iterating over sequences), while loops.</div></div>
+        <div class="card"><h3>🔹 Functions & List Comprehensions</h3><div class="code-block">def add(a,b):<br>    return a+b<br><br>squares = [x**2 for x in range(10)]</div><div class="explain">Functions with def. List comprehensions = concise way to create lists.</div></div>
+    </div>
+
+    <!-- SECTION 2: NumPy -->
+    <h2 class="section-title">🔢 2. NumPy – Numerical Computing</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Arrays & Operations</h3><div class="code-block">import numpy as np<br>arr = np.array([1,2,3,4])<br>zeros = np.zeros((3,3))<br>ones = np.ones((2,4))<br>arr + 5, arr * 2, np.sqrt(arr)</div><div class="explain">NumPy arrays are fast. Vectorized operations (element-wise).</div></div>
+        <div class="card"><h3>🔹 Indexing, Slicing, Reshaping</h3><div class="code-block">arr[0], arr[1:3]<br>matrix = arr.reshape(2,2)<br>matrix.T  # transpose<br>np.concatenate([arr1, arr2])</div><div class="explain">Similar to lists but with multi-dimensional support.</div></div>
+        <div class="card"><h3>🔹 Universal Functions (ufunc)</h3><div class="code-block">np.mean(arr), np.std(arr), np.sum(arr)<br>np.max(), np.min(), np.dot(a,b)</div><div class="explain">Statistical and mathematical functions on arrays.</div></div>
+    </div>
+
+    <!-- SECTION 3: Pandas -->
+    <h2 class="section-title">🐼 3. Pandas – Data Manipulation</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Series & DataFrame</h3><div class="code-block">import pandas as pd<br>s = pd.Series([1,2,3])<br>df = pd.DataFrame({'A':[1,2], 'B':[3,4]})<br>df.head(), df.info(), df.describe()</div><div class="explain">Series = 1D labeled array. DataFrame = 2D table like Excel.</div></div>
+        <div class="card"><h3>🔹 Reading & Writing Data</h3><div class="code-block">df = pd.read_csv('data.csv')<br>df.to_csv('output.csv', index=False)<br>pd.read_excel('file.xlsx')<br>pd.read_json('data.json')</div><div class="explain">Load data from CSV, Excel, JSON, SQL, etc.</div></div>
+        <div class="card"><h3>🔹 Selecting & Filtering</h3><div class="code-block">df['column']          # one column<br>df[['col1','col2']]   # multiple<br>df[df['age'] > 30]    # filtering<br>df.loc['row_label']<br>df.iloc[0,1]</div><div class="explain">loc by label, iloc by index position.</div></div>
+        <div class="card"><h3>🔹 GroupBy & Aggregation</h3><div class="code-block">df.groupby('category')['value'].mean()<br>df.groupby(['col1','col2']).agg({'col3':'sum', 'col4':'count'})</div><div class="explain">Split-apply-combine: powerful for summaries.</div></div>
+        <div class="card"><h3>🔹 Handling Missing Data</h3><div class="code-block">df.isnull().sum()<br>df.dropna()<br>df.fillna(0)<br>df.fillna(df.mean())</div><div class="explain">Detect, remove, or impute missing values (NaN).</div></div>
+        <div class="card"><h3>🔹 Merge, Join, Concatenation</h3><div class="code-block">pd.concat([df1, df2])<br>pd.merge(df1, df2, on='key')<br>df1.join(df2, lsuffix='_left')</div><div class="explain">Combine DataFrames like SQL joins.</div></div>
+    </div>
+
+    <!-- SECTION 4: Data Visualization -->
+    <h2 class="section-title">📈 4. Data Visualization</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Matplotlib Basics</h3><div class="code-block">import matplotlib.pyplot as plt<br>plt.plot(x, y)<br>plt.scatter(x, y)<br>plt.bar(categories, values)<br>plt.hist(data, bins=20)<br>plt.title(), plt.xlabel(), plt.show()</div><div class="explain">Line, scatter, bar, histogram plots. Customize labels/titles.</div></div>
+        <div class="card"><h3>🔹 Seaborn – Statistical Plots</h3><div class="code-block">import seaborn as sns<br>sns.barplot(x='cat', y='val', data=df)<br>sns.heatmap(correlation_matrix)<br>sns.pairplot(df)<br>sns.distplot(data)</div><div class="explain">Higher-level interface for attractive stat plots.</div></div>
+        <div class="card"><h3>🔹 Subplots & Customization</h3><div class="code-block">fig, axes = plt.subplots(2,2)<br>axes[0,0].plot(x1,y1)<br>plt.figure(figsize=(10,6))<br>plt.style.use('ggplot')</div><div class="explain">Multiple plots in one figure, figure size, styles.</div></div>
+    </div>
+
+    <!-- SECTION 5: Statistics for Data Science -->
+    <h2 class="section-title">📐 5. Statistics Essentials</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Descriptive Stats</h3><div class="code-block">mean = np.mean(data)<br>median = np.median(data)<br>mode = stats.mode(data)<br>variance = np.var(data)<br>std = np.std(data)<br>percentile = np.percentile(data, 75)</div><div class="explain">Central tendency, spread, quartiles.</div></div>
+        <div class="card"><h3>🔹 Probability Distributions</h3><div class="code-block"># Normal distribution<br>import scipy.stats as stats<br>rvs = stats.norm.rvs(loc=0, scale=1, size=1000)<br>pdf = stats.norm.pdf(x)</div><div class="explain">Normal, Binomial, Poisson – used for modeling.</div></div>
+        <div class="card"><h3>🔹 Hypothesis Testing & Correlation</h3><div class="code-block">t_stat, p_val = stats.ttest_ind(group1, group2)<br>corr_matrix = df.corr()<br>from scipy.stats import pearsonr</div><div class="explain">T-test, chi-square, Pearson correlation, p-values.</div></div>
+    </div>
+
+    <!-- SECTION 6: Machine Learning (scikit-learn) -->
+    <h2 class="section-title">🤖 6. Machine Learning with scikit-learn</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Train-Test Split & Preprocessing</h3><div class="code-block">from sklearn.model_selection import train_test_split<br>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)<br>from sklearn.preprocessing import StandardScaler<br>scaler = StandardScaler().fit(X_train)</div><div class="explain">Split data, scale features, handle categorical (OneHotEncoder).</div></div>
+        <div class="card"><h3>🔹 Linear Regression</h3><div class="code-block">from sklearn.linear_model import LinearRegression<br>model = LinearRegression()<br>model.fit(X_train, y_train)<br>preds = model.predict(X_test)<br>from sklearn.metrics import mean_squared_error, r2_score</div><div class="explain">Predict continuous values. Evaluate using R², MSE.</div></div>
+        <div class="card"><h3>🔹 Classification (Logistic Regression, Decision Trees)</h3><div class="code-block">from sklearn.linear_model import LogisticRegression<br>from sklearn.tree import DecisionTreeClassifier<br>from sklearn.metrics import accuracy_score, confusion_matrix, classification_report</div><div class="explain">Binary/multi-class classification. Metrics: accuracy, precision, recall, F1.</div></div>
+        <div class="card"><h3>🔹 Clustering (K-Means)</h3><div class="code-block">from sklearn.cluster import KMeans<br>kmeans = KMeans(n_clusters=3)<br>kmeans.fit(X)<br>labels = kmeans.predict(X)</div><div class="explain">Unsupervised learning – group similar data points.</div></div>
+        <div class="card"><h3>🔹 Model Evaluation & Cross-Validation</h3><div class="code-block">from sklearn.model_selection import cross_val_score, GridSearchCV<br>scores = cross_val_score(model, X, y, cv=5)<br>GridSearchCV(model, param_grid, cv=5)</div><div class="explain">Validate model performance, hyperparameter tuning.</div></div>
+    </div>
+
+    <!-- SECTION 7: Data Cleaning & Feature Engineering -->
+    <h2 class="section-title">🧹 7. Data Cleaning & Feature Engineering</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Handling Outliers & Duplicates</h3><div class="code-block">df.drop_duplicates(inplace=True)<br>Q1 = df['col'].quantile(0.25)<br>Q3 = df['col'].quantile(0.75)<br>IQR = Q3 - Q1<br>df = df[~((df['col'] < Q1-1.5*IQR) | (df['col'] > Q3+1.5*IQR))]</div><div class="explain">Remove duplicates, detect outliers using IQR or Z-score.</div></div>
+        <div class="card"><h3>🔹 Encoding Categorical Variables</h3><div class="code-block">df = pd.get_dummies(df, columns=['category'])<br>from sklearn.preprocessing import LabelEncoder<br>le = LabelEncoder()<br>df['encoded'] = le.fit_transform(df['cat'])</div><div class="explain">Convert categories to numbers (one-hot, label encoding).</div></div>
+        <div class="card"><h3>🔹 Feature Scaling & Creation</h3><div class="code-block">from sklearn.preprocessing import MinMaxScaler<br>scaler = MinMaxScaler()<br>df['new_feature'] = df['col1'] / df['col2']<br># Polynomial features, interaction terms</div><div class="explain">Normalize features, create domain-specific features.</div></div>
+    </div>
+
+    <!-- SECTION 8: Real-World Workflow -->
+    <h2 class="section-title">🔄 8. Complete Data Science Workflow</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Example: Predict House Prices</h3><div class="code-block"># 1. Load data<br>df = pd.read_csv('housing.csv')<br># 2. Explore & clean<br>df.info(), df.describe(), handle missing<br># 3. Feature selection<br>X = df[['area','bedrooms','age']]<br>y = df['price']<br># 4. Train-test split & scale<br># 5. Train model (RandomForestRegressor)<br># 6. Evaluate & predict</div><div class="explain">End-to-end pipeline from raw data to predictions.</div></div>
+    </div>
+
+    <!-- SECTION 9: Libraries & Tools Summary -->
+    <hr>
+    <div style="background: #e3f2fd; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 Data Science Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Python</strong><br>lists, dicts, loops, functions, comprehensions</div>
+            <div><strong>🔹 NumPy</strong><br>array, shape, reshape, mean, std, dot</div>
+            <div><strong>🔹 Pandas</strong><br>DataFrame, read_csv, loc, iloc, groupby, merge, fillna</div>
+            <div><strong>🔹 Visualization</strong><br>plt.plot, sns.barplot, hist, heatmap, pairplot</div>
+            <div><strong>🔹 Statistics</strong><br>mean, median, std, correlation, p-value, t-test</div>
+            <div><strong>🔹 Machine Learning</strong><br>train_test_split, StandardScaler, LinearRegression, LogisticRegression, KMeans, RandomForest, metrics</div>
+            <div><strong>🔹 Preprocessing</strong><br>LabelEncoder, OneHotEncoder, MinMaxScaler, dropna</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Always visualize your data first. Use Jupyter Notebook for exploration. Understand bias-variance tradeoff. Feature engineering often matters more than model choice. Practice with Kaggle datasets.
+        </div>
+    </div>
+
+    <!-- Final Projects & Challenges -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Practice Projects (Build Your Portfolio)</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Titanic survival prediction (binary classification) – Kaggle</li>
+            <li>Housing price regression (feature engineering + Random Forest)</li>
+            <li>Customer segmentation using K-Means clustering</li>
+            <li>Analyze COVID-19 time series data (cleaning, visualization, trends)</li>
+            <li>Movie recommendation system using collaborative filtering</li>
+            <li>Build a complete EDA (Exploratory Data Analysis) report with visualizations</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Remember:</strong> Data science is iterative. Clean data → Explore → Model → Evaluate → Improve. You now have a complete roadmap. Start with small datasets and grow!</p>
+    </div>
+</main>
+
+<footer>
+    <p>📊 Complete Data Science Course – Python, Pandas, ML, Stats, Visualization.<br>
+    Click "Home" to return to main website. Happy data crunching!</p>
+</footer>
+
+</body>
+</html>

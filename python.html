@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete Python Course | Master Programming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f0f4f8;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #306998;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #e8f0fe;
+            border-left: 8px solid #ffd43b;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #1e5f5e;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #306998;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #ffd43b;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #e8f0f5;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #306998;
+            border-bottom: 3px solid #ffdd99;
+            display: inline-block;
+        }
+
+        footer {
+            background: #dce5ec;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #1f4e6e;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 CourseHub</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">🐍 Complete Python Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>🐍 Complete Python – Simplicity Meets Power</h2>
+        <p>Python is a versatile, beginner-friendly language used in web development, data science, AI, and automation. This course covers everything: syntax, data types, control flow, functions, OOP, modules, file handling, exceptions, and key libraries like NumPy and Pandas. Clear examples for every topic. Let's code in Python!</p>
+    </div>
+
+    <!-- SECTION 1: Python Basics -->
+    <h2 class="section-title">📖 1. Python Fundamentals</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Hello World & Setup</h3><div class="code-block">print("Hello, Python!")</div><div class="explain">Install Python from python.org. Run: python script.py or interactive REPL.</div></div>
+        <div class="card"><h3>🔹 Variables & Data Types</h3><div class="code-block">age = 25               # int<br>price = 19.99          # float<br>name = "Alice"         # str<br>is_valid = True        # bool<br>my_list = [1,2,3]      # list<br>my_tuple = (1,2,3)     # tuple (immutable)<br>my_dict = {"a":1}      # dict<br>my_set = {1,2,3}       # set</div><div class="explain">Python is dynamically typed. Use type() to check.</div></div>
+        <div class="card"><h3>🔹 Operators & Type Conversion</h3><div class="code-block">+ - * / // % **<br>> < >= <= == != and or not<br>int("10"), float("3.14"), str(42)</div></div>
+        <div class="card"><h3>🔹 Input & Output</h3><div class="code-block">name = input("Enter name: ")<br>print(f"Hello {name}")   # f-string (Python 3.6+)<br>print("Age:", age)</div></div>
+    </div>
+
+    <!-- SECTION 2: Control Flow -->
+    <h2 class="section-title">⚙️ 2. Control Flow</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 if-elif-else</h3><div class="code-block">score = 85<br>if score >= 90:<br>    grade = "A"<br>elif score >= 80:<br>    grade = "B"<br>else:<br>    grade = "C"<br>print(grade)</div></div>
+        <div class="card"><h3>🔹 Loops (for, while)</h3><div class="code-block"># for loop<br>for i in range(5):          # 0..4<br>    print(i)<br><br>for item in [1,2,3]:<br>    print(item)<br><br># while loop<br>count = 0<br>while count < 3:<br>    print(count)<br>    count += 1</div></div>
+        <div class="card"><h3>🔹 break, continue, else</h3><div class="code-block">for i in range(10):<br>    if i == 5: break<br>    if i % 2 == 0: continue<br>    print(i)<br>else:<br>    print("Loop completed without break")</div></div>
+    </div>
+
+    <!-- SECTION 3: Functions -->
+    <h2 class="section-title">🧩 3. Functions</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Defining & Calling</h3><div class="code-block">def greet(name):<br>    return f"Hello {name}"<br><br>result = greet("Alice")<br>print(result)</div></div>
+        <div class="card"><h3>🔹 Default & Keyword Arguments</h3><div class="code-block">def pow(base, exp=2):<br>    return base ** exp<br><br>pow(5)      # 25<br>pow(2,3)    # 8<br>pow(exp=3, base=2)  # keyword args</div></div>
+        <div class="card"><h3>🔹 *args and **kwargs</h3><div class="code-block">def sum_all(*args):<br>    return sum(args)<br><br>def print_info(**kwargs):<br>    for k,v in kwargs.items():<br>        print(f"{k}: {v}")</div></div>
+        <div class="card"><h3>🔹 Lambda Functions</h3><div class="code-block">square = lambda x: x**2<br>nums = [1,2,3]<br>squared = list(map(lambda x: x**2, nums))</div></div>
+    </div>
+
+    <!-- SECTION 4: Data Structures -->
+    <h2 class="section-title">📊 4. Data Structures (Lists, Tuples, Dicts, Sets)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Lists (mutable)</h3><div class="code-block">lst = [1,2,3]<br>lst.append(4)<br>lst.insert(0,0)<br>lst.remove(2)<br>popped = lst.pop()<br>lst[2] = 99<br>sliced = lst[1:3]</div></div>
+        <div class="card"><h3>🔹 List Comprehensions</h3><div class="code-block">squares = [x**2 for x in range(10)]<br>evens = [x for x in range(20) if x % 2 == 0]</div></div>
+        <div class="card"><h3>🔹 Tuples (immutable)</h3><div class="code-block">tup = (1,2,3)<br>a,b,c = tup  # unpacking</div></div>
+        <div class="card"><h3>🔹 Dictionaries</h3><div class="code-block">d = {"name": "Alice", "age": 25}<br>d["email"] = "alice@example.com"<br>for key, value in d.items():<br>    print(key, value)</div></div>
+        <div class="card"><h3>🔹 Sets</h3><div class="code-block">s = {1,2,3}<br>s.add(4)<br>s.remove(2)<br>union = s | {3,5}<br>intersection = s & {3,4}</div></div>
+    </div>
+
+    <!-- SECTION 5: Object-Oriented Programming -->
+    <h2 class="section-title">🧬 5. OOP in Python</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Classes & Objects</h3><div class="code-block">class Car:<br>    def __init__(self, brand):<br>        self.brand = brand<br>    def honk(self):<br>        print(f"{self.brand} says Beep!")<br><br>my_car = Car("Toyota")<br>my_car.honk()</div></div>
+        <div class="card"><h3>🔹 Inheritance</h3><div class="code-block">class Animal:<br>    def speak(self): pass<br><br>class Dog(Animal):<br>    def speak(self):<br>        return "Woof!"</div></div>
+        <div class="card"><h3>🔹 Encapsulation & Properties</h3><div class="code-block">class Person:<br>    def __init__(self, age):<br>        self._age = age   # protected<br>    @property<br>    def age(self):<br>        return self._age<br>    @age.setter<br>    def age(self, value):<br>        if value > 0: self._age = value</div></div>
+        <div class="card"><h3>🔹 Magic Methods (__str__, __repr__)</h3><div class="code-block">def __str__(self):<br>    return f"Car({self.brand})"</div></div>
+    </div>
+
+    <!-- SECTION 6: Modules & Packages -->
+    <h2 class="section-title">📦 6. Modules & Packages</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Importing Modules</h3><div class="code-block">import math<br>import random as rnd<br>from datetime import datetime<br><br>print(math.sqrt(16))<br>print(rnd.randint(1,10))</div></div>
+        <div class="card"><h3>🔹 Creating Your Own Module</h3><div class="code-block"># mymodule.py<br>def add(a,b): return a+b<br><br># main.py<br>from mymodule import add</div></div>
+    </div>
+
+    <!-- SECTION 7: File Handling -->
+    <h2 class="section-title">📁 7. File I/O</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Reading & Writing Files</h3><div class="code-block"># Write<br>with open("file.txt", "w") as f:<br>    f.write("Hello World\n")<br><br># Read<br>with open("file.txt", "r") as f:<br>    content = f.read()<br>    lines = f.readlines()</div></div>
+        <div class="card"><h3>🔹 Working with CSV & JSON</h3><div class="code-block">import csv, json<br><br># CSV<br>with open('data.csv', 'r') as f:<br>    reader = csv.reader(f)<br><br># JSON<br>data = {'name': 'Alice'}<br>json_str = json.dumps(data)<br>obj = json.loads(json_str)</div></div>
+    </div>
+
+    <!-- SECTION 8: Exception Handling -->
+    <h2 class="section-title">⚠️ 8. Exception Handling</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 try-except-else-finally</h3><div class="code-block">try:<br>    x = int(input("Enter number: "))<br>    result = 10 / x<br>except ValueError:<br>    print("That's not a number!")<br>except ZeroDivisionError:<br>    print("Can't divide by zero")<br>else:<br>    print(f"Result: {result}")<br>finally:<br>    print("Execution done")</div></div>
+        <div class="card"><h3>🔹 Raising Exceptions</h3><div class="code-block">def validate_age(age):<br>    if age < 0:<br>        raise ValueError("Age cannot be negative")</div></div>
+    </div>
+
+    <!-- SECTION 9: Python Libraries (NumPy, Pandas, Matplotlib) -->
+    <h2 class="section-title">📊 9. Essential Libraries</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 NumPy</h3><div class="code-block">import numpy as np<br>arr = np.array([1,2,3])<br>zeros = np.zeros((3,3))<br>mean = np.mean(arr)</div></div>
+        <div class="card"><h3>🔹 Pandas</h3><div class="code-block">import pandas as pd<br>df = pd.DataFrame({'A':[1,2], 'B':[3,4]})<br>df.head()<br>df.groupby('A').sum()</div></div>
+        <div class="card"><h3>🔹 Matplotlib (Basic Plot)</h3><div class="code-block">import matplotlib.pyplot as plt<br>plt.plot([1,2,3], [4,5,6])<br>plt.show()</div></div>
+    </div>
+
+    <!-- SECTION 10: Advanced Topics -->
+    <h2 class="section-title">🚀 10. Advanced Python</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Decorators</h3><div class="code-block">def timer(func):<br>    def wrapper(*args, **kwargs):<br>        import time<br>        start = time.time()<br>        result = func(*args, **kwargs)<br>        print(f"Time: {time.time()-start}")<br>        return result<br>    return wrapper<br><br>@timer<br>def slow_func():<br>    import time; time.sleep(1)</div></div>
+        <div class="card"><h3>🔹 Generators & yield</h3><div class="code-block">def count_up_to(n):<br>    i = 0<br>    while i < n:<br>        yield i<br>        i += 1<br><br>for num in count_up_to(5):<br>    print(num)</div></div>
+        <div class="card"><h3>🔹 List vs Generator Expressions</h3><div class="code-block"># List: memory heavy<br>squares = [x**2 for x in range(1000000)]<br># Generator: lazy evaluation<br>squares_gen = (x**2 for x in range(1000000))</div></div>
+        <div class="card"><h3>🔹 Context Managers (with statement)</h3><div class="code-block">class ManagedFile:<br>    def __enter__(self):<br>        self.file = open("file.txt", "w")<br>        return self.file<br>    def __exit__(self, exc_type, exc_val, exc_tb):<br>        self.file.close()</div></div>
+        <div class="card"><h3>🔹 Threading & AsyncIO</h3><div class="code-block">import threading<br>def worker(): print("Working")<br>t = threading.Thread(target=worker)<br>t.start()<br><br># Async (asyncio)<br>import asyncio<br>async def main():<br>    await asyncio.sleep(1)<br>    print("Done")</div></div>
+    </div>
+
+    <!-- Cheat Sheet & Summary -->
+    <hr>
+    <div style="background: #e8f0fe; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 Python Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Data Types</strong><br>int, float, str, bool, list, tuple, dict, set, None</div>
+            <div><strong>🔹 Control Flow</strong><br>if/elif/else, for, while, break, continue</div>
+            <div><strong>🔹 Functions</strong><br>def, lambda, return, *args, **kwargs</div>
+            <div><strong>🔹 Collections</strong><br>append, extend, insert, remove, pop, sort, reverse, len()</div>
+            <div><strong>🔹 Strings</strong><br>join, split, replace, strip, upper, lower, format, f-string</div>
+            <div><strong>🔹 File I/O</strong><br>open, read, write, close, with, csv, json</div>
+            <div><strong>🔹 OOP</strong><br>class, self, __init__, inheritance, @property</div>
+            <div><strong>🔹 Libraries</strong><br>numpy, pandas, matplotlib, requests, flask, django</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Use list comprehensions for simple loops. Leverage built-in functions (sum, max, sorted). Write docstrings. Use virtual environments. Follow PEP 8 style. Practice coding every day!
+        </div>
+    </div>
+
+    <!-- Final Projects -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Build These Python Projects</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>To-Do List CLI with file storage</li>
+            <li>Calculator with GUI (Tkinter)</li>
+            <li>Web scraper using requests + BeautifulSoup</li>
+            <li>Data Analysis Dashboard with Pandas and Matplotlib</li>
+            <li>Simple Blog using Flask (web framework)</li>
+            <li>Automate daily tasks (email, file organizer)</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Next Steps:</strong> Explore web dev (Django/Flask), data science (Pandas/Scikit-learn), or automation. Python is everywhere – you now have a complete roadmap. Happy coding!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🐍 Complete Python Course – From zero to hero.<br>
+    Click "Home" to return to main website. Keep coding in Python!</p>
+</footer>
+
+</body>
+</html>

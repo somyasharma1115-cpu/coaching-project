@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>C Programming for Beginners | Simple Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fefaf5;
+            color: #1f2e3a;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #1e3a3f;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #e4f0ea;
+            border-left: 8px solid #2c7a5e;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #1b5e4a;
+            margin-bottom: 0.5rem;
+        }
+
+        .simple-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+        }
+
+        .simple-card h3 {
+            font-size: 1.6rem;
+            color: #1a6d5c;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 1rem 1.2rem;
+            border-radius: 1rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.95rem;
+            margin: 1rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #f4b942;
+        }
+
+        .tip {
+            background: #dff3e9;
+            padding: 0.7rem 1rem;
+            border-radius: 0.8rem;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            background: #d4e0da;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #1f4e44;
+        }
+
+        @media (max-width: 700px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .welcome-box h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 Course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">💻 C Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>🐚 Welcome to C Programming</h2>
+        <p>C is the mother of many modern languages. It's powerful, fast, and used in operating systems, embedded devices, and game engines. This course explains everything in simple words with real examples. No stress — just code!</p>
+    </div>
+
+    <!-- LESSON 1: Hello World in C -->
+    <div class="simple-card">
+        <h3>📌 1. Your First C Program</h3>
+        <p>Every C program starts with <code>main()</code>. Let's print "Hello World" to the screen.</p>
+        <div class="code-block">
+            #include &lt;stdio.h&gt;<br><br>
+            int main() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Hello, welcome to C!\n");<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+        </div>
+        <div class="explain">
+            🔍 <strong>Simple explanation:</strong> <br>
+            • <code>#include &lt;stdio.h&gt;</code> → includes the standard input/output library (needed for <code>printf</code>).<br>
+            • <code>int main()</code> → the starting point of any C program.<br>
+            • <code>printf(...)</code> → prints text to the screen.<br>
+            • <code>\n</code> → moves to a new line (like pressing Enter).<br>
+            • <code>return 0;</code> → tells the system "program finished successfully".
+        </div>
+        <div class="tip">
+            💡 <strong>Try it:</strong> Change the text inside <code>printf</code> to your own message!
+        </div>
+    </div>
+
+    <!-- LESSON 2: Variables and Data Types -->
+    <div class="simple-card">
+        <h3>📦 2. Variables – Storing Data</h3>
+        <p>Variables are containers in memory. C has different types for different kinds of data.</p>
+        <div class="code-block">
+            int age = 21;          // whole number<br>
+            float price = 19.99;   // decimal number (less precise)<br>
+            double pi = 3.14159;   // decimal (more precise)<br>
+            char grade = 'A';      // single character (uses single quotes)<br><br>
+            printf("Age: %d, Price: %.2f, Grade: %c", age, price, grade);
+        </div>
+        <div class="explain">
+            📖 <strong>What each type means:</strong> <br>
+            • <code>int</code> → stores integers like 0, 100, -50.<br>
+            • <code>float</code> / <code>double</code> → stores decimal numbers.<br>
+            • <code>char</code> → stores one character like 'X', '7', '#'.
+        </div>
+        <div class="tip">
+            🧠 <strong>Format specifiers:</strong> <code>%d</code> for int, <code>%f</code> for float, <code>%c</code> for char, <code>%s</code> for string.
+        </div>
+    </div>
+
+    <!-- LESSON 3: Taking User Input with scanf -->
+    <div class="simple-card">
+        <h3>⌨️ 3. Getting Input from User</h3>
+        <p>Use <code>scanf</code> to read what the user types.</p>
+        <div class="code-block">
+            int number;<br>
+            printf("Enter a number: ");<br>
+            scanf("%d", &number);<br>
+            printf("You entered: %d\n", number);
+        </div>
+        <div class="explain">
+            🎤 <strong>How it works:</strong> <br>
+            • <code>scanf("%d", &number);</code> → waits for the user to type an integer and stores it in <code>number</code>.<br>
+            • The <code>&</code> symbol gives the memory address of the variable (don't worry, just remember to use it for now).
+        </div>
+    </div>
+
+    <!-- LESSON 4: Conditions (if / else) -->
+    <div class="simple-card">
+        <h3>⚡ 4. Making Decisions – if / else</h3>
+        <p>Your program can take different actions based on conditions.</p>
+        <div class="code-block">
+            int marks = 75;<br><br>
+            if (marks >= 60) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Passed! Great job.\n");<br>
+            } else {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Needs improvement.\n");<br>
+            }
+        </div>
+        <div class="explain">
+            🧠 <strong>Logic:</strong> If the condition inside <code>( )</code> is true, the first block runs; otherwise, the <code>else</code> block runs.
+        </div>
+        <div class="tip">
+            🧪 Try changing <code>marks</code> to 45 and see the output.
+        </div>
+    </div>
+
+    <!-- LESSON 5: Loops (for, while) -->
+    <div class="simple-card">
+        <h3>🔄 5. Loops – Repeat Actions</h3>
+        <p>Loops help you run the same code multiple times without writing it again.</p>
+        <div class="code-block">
+            // for loop – when you know how many times<br>
+            for (int i = 1; i <= 5; i++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Count: %d\n", i);<br>
+            }<br><br>
+            // while loop – repeats as long as condition is true<br>
+            int j = 1;<br>
+            while (j <= 3) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("While loop: %d\n", j);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;j++;<br>
+            }
+        </div>
+        <div class="explain">
+            🔁 <strong>For loop explained:</strong> <br>
+            • <code>int i = 1</code> → start at 1.<br>
+            • <code>i <= 5</code> → continue while i is less or equal to 5.<br>
+            • <code>i++</code> → increase i by 1 each time.
+        </div>
+    </div>
+
+    <!-- LESSON 6: Arrays -->
+    <div class="simple-card">
+        <h3>📊 6. Arrays – Lists of Data</h3>
+        <p>An array stores many values of the same type in a single variable.</p>
+        <div class="code-block">
+            int scores[5] = {90, 85, 78, 92, 88};<br><br>
+            for (int i = 0; i < 5; i++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Score %d: %d\n", i+1, scores[i]);<br>
+            }
+        </div>
+        <div class="explain">
+            📌 <strong>Key points:</strong> <br>
+            • Indexing starts at 0: <code>scores[0]</code> is the first element (90).<br>
+            • Use loops to go through arrays easily.
+        </div>
+    </div>
+
+    <!-- LESSON 7: Functions -->
+    <div class="simple-card">
+        <h3>🧩 7. Functions – Reusable Code Blocks</h3>
+        <p>Functions help you organize code and avoid repetition.</p>
+        <div class="code-block">
+            // function definition<br>
+            void greet() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Hello from a function!\n");<br>
+            }<br><br>
+            int add(int a, int b) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br>
+            }<br><br>
+            int main() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;greet();<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;int sum = add(5, 3);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Sum is %d\n", sum);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+        </div>
+        <div class="explain">
+            📚 <strong>What's happening?</strong><br>
+            • <code>void greet()</code> → a function that does not return a value.<br>
+            • <code>int add(int a, int b)</code> → takes two integers and returns their sum.<br>
+            • In <code>main()</code> we call the functions.
+        </div>
+    </div>
+
+    <!-- LESSON 8: Pointers (explained simply) -->
+    <div class="simple-card">
+        <h3>📍 8. Pointers – Memory Addresses</h3>
+        <p>A pointer stores the address of a variable. It sounds advanced, but it's just a number that tells where data lives.</p>
+        <div class="code-block">
+            int value = 42;<br>
+            int *ptr = &value;   // ptr stores the address of 'value'<br><br>
+            printf("Value: %d\n", value);     // prints 42<br>
+            printf("Address: %p\n", ptr);     // prints address (hex)<br>
+            printf("Via pointer: %d\n", *ptr); // prints 42 (dereferencing)
+        </div>
+        <div class="explain">
+            🧭 <strong>Simple analogy:</strong> Think of a variable as a house. The pointer is the address of that house. <code>*ptr</code> lets you enter the house and see what's inside.
+        </div>
+        <div class="tip">
+            💡 Pointers are very useful for arrays, functions, and dynamic memory. Don't worry if it's tricky at first — practice!
+        </div>
+    </div>
+
+    <!-- LESSON 9: Strings in C (character arrays) -->
+    <div class="simple-card">
+        <h3>🔤 9. Strings – Working with Text</h3>
+        <p>In C, strings are arrays of characters ending with a null character <code>'\0'</code>.</p>
+        <div class="code-block">
+            char name[] = "Alice";   // automatically adds '\0'<br>
+            printf("Hello, %s\n", name);<br><br>
+            // modify string<br>
+            name[0] = 'B';<br>
+            printf("New name: %s\n", name); // prints "Blice"
+        </div>
+        <div class="explain">
+            📝 <strong>Important:</strong> Strings are just arrays of characters. Use <code>%s</code> to print them.
+        </div>
+    </div>
+
+    <!-- Full Example: Simple Calculator -->
+    <div class="simple-card">
+        <h3>🧮 Full Example – Simple Calculator</h3>
+        <p>This program asks for two numbers and prints their sum.</p>
+        <div class="code-block">
+            #include &lt;stdio.h&gt;<br><br>
+            int main() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;double num1, num2;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Enter first number: ");<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;scanf("%lf", &num1);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Enter second number: ");<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;scanf("%lf", &num2);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Sum = %.2f\n", num1 + num2);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+        </div>
+        <div class="tip">
+            🎯 <strong>Enhance it:</strong> Try adding subtraction, multiplication, division!
+        </div>
+    </div>
+
+    <!-- Quick Summary Grid -->
+    <hr>
+    <h3 style="color: #1b6e5a; margin: 1rem 0 0.5rem;">📚 Quick C Reference</h3>
+    <div class="grid-2">
+        <div style="background:#fff6e8; border-radius: 1rem; padding: 1rem;">
+            <strong>🔹 printf</strong> → output: <code>printf("text %d", var);</code><br>
+            <strong>🔹 scanf</strong> → input: <code>scanf("%d", &var);</code><br>
+            <strong>🔹 if / else</strong> → decisions<br>
+            <strong>🔹 for / while</strong> → loops
+        </div>
+        <div style="background:#eef3fa; border-radius: 1rem; padding: 1rem;">
+            <strong>🔹 int, float, double, char</strong> → data types<br>
+            <strong>🔹 array[ ]</strong> → list of items<br>
+            <strong>🔹 function()</strong> → reusable code<br>
+            <strong>🔹 *pointer</strong> → memory address
+        </div>
+    </div>
+
+    <!-- Practice Challenges -->
+    <div style="background:#e0f0ec; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>✏️ Practice Challenges (Start with these)</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Write a program that asks for your age and prints "You are X years old".</li>
+            <li>Create a program that prints the multiplication table of a number entered by user.</li>
+            <li>Write a function that returns the maximum of two integers.</li>
+            <li>Make an array of 5 integers, fill them with values, and calculate the average.</li>
+            <li>Swap two numbers using pointers (fun challenge!).</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">💪 <strong>Remember:</strong> C is simple at heart. Each small program makes you better. Keep coding!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🐚 C Language Course — Clear, Step by Step.<br>
+    Click "Home" to return to main website. Master C and unlock the world of systems programming!</p>
+</footer>
+
+</body>
+</html>

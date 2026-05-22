@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete Java Course | Object-Oriented Programming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f4f0;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #2c2e3a;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #f0e6d5;
+            border-left: 8px solid #b85c00;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #7a3e00;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #b85c00;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #f39c12;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #e8f0f5;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #b85c00;
+            border-bottom: 3px solid #f5d6a8;
+            display: inline-block;
+        }
+
+        footer {
+            background: #e2dfd3;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #2d2b1f;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 Course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">☕ Complete Java Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>☕ Complete Java – Write Once, Run Anywhere</h2>
+        <p>Java is a powerful, object-oriented programming language used for enterprise apps, Android, and backend systems. This course covers everything: syntax, OOP, collections, exceptions, multithreading, file I/O, JDBC, lambdas, and more. Clear examples for all topics. Let's master Java!</p>
+    </div>
+
+    <!-- SECTION 1: Java Basics -->
+    <h2 class="section-title">📖 1. Java Fundamentals</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Hello World & Setup</h3><div class="code-block">public class Main {<br>    public static void main(String[] args) {<br>        System.out.println("Hello Java!");<br>    }<br>}</div><div class="explain">JDK + IDE (IntelliJ/Eclipse). javac Main.java, java Main.</div></div>
+        <div class="card"><h3>🔹 Variables & Data Types</h3><div class="code-block">int age = 25;<br>double price = 19.99;<br>char grade = 'A';<br>boolean isValid = true;<br>String name = "Alice";</div><div class="explain">Primitive: int, double, char, boolean. Reference: String, arrays, objects.</div></div>
+        <div class="card"><h3>🔹 Operators & Control Flow</h3><div class="code-block">if (score >= 60) {<br>    System.out.println("Pass");<br>} else {<br>    System.out.println("Fail");<br>}<br><br>for (int i=0; i<5; i++) { ... }<br>while (condition) { ... }<br>switch(day) { case 1: ... }</div></div>
+    </div>
+
+    <!-- SECTION 2: Object-Oriented Programming (OOP) -->
+    <h2 class="section-title">🧩 2. Object-Oriented Programming</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Classes & Objects</h3><div class="code-block">class Car {<br>    String brand;<br>    void honk() {<br>        System.out.println("Beep!");<br>    }<br>}<br>Car myCar = new Car();<br>myCar.brand = "Toyota";<br>myCar.honk();</div></div>
+        <div class="card"><h3>🔹 Constructors & this</h3><div class="code-block">class Student {<br>    String name;<br>    Student(String name) {<br>        this.name = name;<br>    }<br>}</div></div>
+        <div class="card"><h3>🔹 Encapsulation (Getters/Setters)</h3><div class="code-block">class Person {<br>    private int age;<br>    public int getAge() { return age; }<br>    public void setAge(int age) { this.age = age; }<br>}</div><div class="explain">Hide data, control access.</div></div>
+        <div class="card"><h3>🔹 Inheritance & super</h3><div class="code-block">class Animal { void sound() { } }<br>class Dog extends Animal {<br>    void sound() { System.out.println("Bark"); }<br>}</div></div>
+        <div class="card"><h3>🔹 Polymorphism (Overloading & Overriding)</h3><div class="code-block">// Method overloading<br>int add(int a, int b)<br>double add(double a, double b)<br><br>// Overriding (runtime polymorphism)</div></div>
+        <div class="card"><h3>🔹 Abstract Classes & Interfaces</h3><div class="code-block">abstract class Shape { abstract void draw(); }<br>interface Drawable { void draw(); }<br>class Circle implements Drawable { ... }</div><div class="explain">Interfaces for multiple inheritance, abstraction.</div></div>
+    </div>
+
+    <!-- SECTION 3: Arrays & Collections Framework -->
+    <h2 class="section-title">📊 3. Arrays & Collections</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Arrays</h3><div class="code-block">int[] numbers = {1,2,3};<br>String[] names = new String[5];<br>numbers[0] = 10;<br>for (int n : numbers) { }</div></div>
+        <div class="card"><h3>🔹 ArrayList, LinkedList</h3><div class="code-block">import java.util.*;<br>List&lt;String&gt; list = new ArrayList&lt;&gt;();<br>list.add("A");<br>list.get(0);<br>list.remove(0);<br>LinkedList&lt;Integer&gt; linked = new LinkedList&lt;&gt;();</div><div class="explain">ArrayList: dynamic array. LinkedList: doubly-linked.</div></div>
+        <div class="card"><h3>🔹 HashSet, TreeSet</h3><div class="code-block">Set&lt;String&gt; set = new HashSet&lt;&gt;();<br>set.add("apple");<br>set.contains("apple");<br>TreeSet maintains sorted order.</div></div>
+        <div class="card"><h3>🔹 HashMap, TreeMap</h3><div class="code-block">Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();<br>map.put("John", 25);<br>int age = map.get("John");<br>TreeMap keeps keys sorted.</div></div>
+        <div class="card"><h3>🔹 Iterators & for-each</h3><div class="code-block">Iterator&lt;String&gt; it = list.iterator();<br>while(it.hasNext()) { ... }<br>list.forEach(item -> System.out.println(item));</div></div>
+    </div>
+
+    <!-- SECTION 4: Exception Handling -->
+    <h2 class="section-title">⚠️ 4. Exception Handling</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 try-catch-finally</h3><div class="code-block">try {<br>    int x = 10/0;<br>} catch (ArithmeticException e) {<br>    System.out.println(e.getMessage());<br>} finally {<br>    System.out.println("Always runs");<br>}</div></div>
+        <div class="card"><h3>🔹 throw & throws</h3><div class="code-block">void validate(int age) throws Exception {<br>    if (age < 18) throw new Exception("Invalid");<br>}</div><div class="explain">Checked vs unchecked exceptions.</div></div>
+        <div class="card"><h3>🔹 Custom Exceptions</h3><div class="code-block">class MyException extends Exception {<br>    MyException(String msg) { super(msg); }<br>}</div></div>
+    </div>
+
+    <!-- SECTION 5: Multithreading & Concurrency -->
+    <h2 class="section-title">⚙️ 5. Multithreading</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Thread class & Runnable</h3><div class="code-block">class MyThread extends Thread {<br>    public void run() { ... }<br>}<br>MyThread t = new MyThread();<br>t.start();<br><br>Runnable r = () -> System.out.println("run");<br>new Thread(r).start();</div></div>
+        <div class="card"><h3>🔹 Synchronization & Locks</h3><div class="code-block">synchronized(this) { ... }<br>// or synchronized method<br>Lock lock = new ReentrantLock();<br>lock.lock(); try { } finally { lock.unlock(); }</div></div>
+        <div class="card"><h3>🔹 Executor Framework</h3><div class="code-block">ExecutorService executor = Executors.newFixedThreadPool(5);<br>executor.submit(() -> doWork());<br>executor.shutdown();</div></div>
+    </div>
+
+    <!-- SECTION 6: File I/O -->
+    <h2 class="section-title">📁 6. File I/O (java.io & java.nio)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Reading/Writing Text Files</h3><div class="code-block">// Write<br>try (BufferedWriter bw = new BufferedWriter(new FileWriter("file.txt"))) {<br>    bw.write("Hello");<br>}<br>// Read<br>try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {<br>    String line = br.readLine();<br>}</div></div>
+        <div class="card"><h3>🔹 Files & Paths (NIO)</h3><div class="code-block">Path path = Paths.get("file.txt");<br>List&lt;String&gt; lines = Files.readAllLines(path);<br>Files.writeString(path, "content");</div></div>
+    </div>
+
+    <!-- SECTION 7: JDBC (Database Connectivity) -->
+    <h2 class="section-title">🗄️ 7. JDBC – Database Access</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Connecting & Querying</h3><div class="code-block">Class.forName("com.mysql.cj.jdbc.Driver");<br>Connection conn = DriverManager.getConnection(url, user, pass);<br>Statement stmt = conn.createStatement();<br>ResultSet rs = stmt.executeQuery("SELECT * FROM users");<br>while(rs.next()) {<br>    String name = rs.getString("name");<br>}<br>PreparedStatement pstmt = conn.prepareStatement("INSERT INTO ...");<br>pstmt.setString(1, "value");<br>pstmt.executeUpdate();</div></div>
+    </div>
+
+    <!-- SECTION 8: Lambda & Streams (Java 8+) -->
+    <h2 class="section-title">✨ 8. Lambda Expressions & Streams</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Lambda Syntax</h3><div class="code-block">(params) -> expression<br>List&lt;String&gt; list = Arrays.asList("a","b");<br>list.forEach(s -> System.out.println(s));<br><br>Comparator&lt;String&gt; comp = (s1,s2) -> s1.compareTo(s2);</div></div>
+        <div class="card"><h3>🔹 Stream API</h3><div class="code-block">list.stream()<br>    .filter(s -> s.startsWith("a"))<br>    .map(String::toUpperCase)<br>    .collect(Collectors.toList());<br><br>int sum = numbers.stream().mapToInt(i->i).sum();</div></div>
+    </div>
+
+    <!-- SECTION 9: Additional Topics -->
+    <h2 class="section-title">📚 9. More Java Features</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Generics</h3><div class="code-block">class Box&lt;T&gt; {<br>    private T item;<br>    public void set(T t) { item = t; }<br>    public T get() { return item; }<br>}<br>Box&lt;String&gt; box = new Box&lt;&gt;();</div></div>
+        <div class="card"><h3>🔹 Enums & Annotations</h3><div class="code-block">enum Day { MON, TUE, WED }<br>Day d = Day.MON;<br><br>@Override<br>@Deprecated</div></div>
+        <div class="card"><h3>🔹 Date & Time (java.time)</h3><div class="code-block">LocalDate date = LocalDate.now();<br>LocalTime time = LocalTime.now();<br>DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");</div></div>
+        <div class="card"><h3>🔹 Modules & Packaging</h3><div class="explain">module-info.java, packages (import). JAR creation with jar tool.</div></div>
+    </div>
+
+    <!-- Cheat Sheet & Summary -->
+    <hr>
+    <div style="background: #f0e6d5; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 Java Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Keywords</strong><br>class, public, static, void, new, this, super, extends, implements, abstract, interface, final, try, catch, throw, throws, synchronized</div>
+            <div><strong>🔹 Collections</strong><br>ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, Iterator, Collections utility</div>
+            <div><strong>🔹 OOP Pillars</strong><br>Encapsulation, Inheritance, Polymorphism, Abstraction</div>
+            <div><strong>🔹 Common APIs</strong><br>String, StringBuilder, Math, Arrays, System, Thread, Executors, Files, Paths</div>
+            <div><strong>🔹 Annotations</strong><br>@Override, @Deprecated, @SuppressWarnings, @FunctionalInterface</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Use meaningful variable names. Master OOP principles. Practice with LeetCode and building small projects. Learn Maven/Gradle for dependencies. Java is everywhere – keep coding!
+        </div>
+    </div>
+
+    <!-- Final Projects & Practice -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Build These Java Projects</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Student Management System (OOP + Collections + File I/O)</li>
+            <li>Banking Application (Encapsulation, inheritance, exception handling)</li>
+            <li>Chat Application (Multithreading + Sockets)</li>
+            <li>Library Management System (JDBC + MySQL)</li>
+            <li>To-Do List with Lambda and Streams</li>
+            <li>Calculator with Swing/JavaFX (GUI)</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Next Steps:</strong> Master frameworks like Spring Boot, Hibernate for enterprise development. You now have a complete Java roadmap – start building real-world apps!</p>
+    </div>
+</main>
+
+<footer>
+    <p>☕ Complete Java Course – Object-Oriented Programming & Beyond.<br>
+    Click "Home" to return to main website. Happy coding in Java!</p>
+</footer>
+
+</body>
+</html>

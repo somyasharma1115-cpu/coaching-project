@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete Web Development Course | Full-Stack Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #0f172a;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #eef2ff;
+            border-left: 8px solid #3b82f6;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #1e40af;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #60a5fa;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #0f172a;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #fef3c7;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .tip {
+            background: #e0f2fe;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #1e40af;
+            border-bottom: 3px solid #bfdbfe;
+            display: inline-block;
+        }
+
+        footer {
+            background: #e2e8f0;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #1e293b;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 Course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">🌐 Complete Web Dev Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>🌐 Complete Web Development – Full-Stack Mastery</h2>
+        <p>Web development is the art of building websites and web apps. This course covers everything: frontend (HTML, CSS, JavaScript, React), backend (Node.js, Express), databases (MongoDB, SQL), version control (Git), and deployment. No prior experience needed – become a full-stack developer!</p>
+    </div>
+
+    <!-- SECTION 1: Frontend Basics -->
+    <h2 class="section-title">🎨 1. Frontend Development</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 HTML – Structure</h3><div class="code-block">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;&lt;title&gt;My Site&lt;/title&gt;&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;h1&gt;Hello World&lt;/h1&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</div><div class="explain">Semantic tags: header, nav, main, article, section, footer. Forms, tables, images.</div></div>
+        <div class="card"><h3>🔹 CSS – Styling</h3><div class="code-block">.container {<br>    display: flex;<br>    justify-content: center;<br>    background: #f0f0f0;<br>    padding: 20px;<br>}</div><div class="explain">Flexbox, Grid, animations, media queries for responsive design.</div></div>
+        <div class="card"><h3>🔹 JavaScript – Interactivity</h3><div class="code-block">document.querySelector('button').addEventListener('click', () => {<br>    alert('Clicked!');<br>});</div><div class="explain">DOM manipulation, events, fetch API, ES6+ features.</div></div>
+    </div>
+
+    <!-- SECTION 2: Frontend Frameworks (React) -->
+    <h2 class="section-title">⚛️ 2. Modern Frontend – React</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Components & JSX</h3><div class="code-block">function Welcome({ name }) {<br>    return &lt;h1&gt;Hello {name}&lt;/h1&gt;;<br>}</div><div class="explain">Reusable UI pieces. JSX = JavaScript + XML.</div></div>
+        <div class="card"><h3>🔹 State & Hooks</h3><div class="code-block">import { useState } from 'react';<br><br>function Counter() {<br>    const [count, setCount] = useState(0);<br>    return &lt;button onClick={() => setCount(count+1)}&gt;{count}&lt;/button&gt;;<br>}</div><div class="explain">useState, useEffect, useContext manage component state and side effects.</div></div>
+        <div class="card"><h3>🔹 Routing & API Calls</h3><div class="code-block">// React Router<br>&lt;Route path="/about" element=&lt;About /&gt; /&gt;<br><br>// Fetch data<br>useEffect(() => { fetch('/api/data').then(...) }, []);</div></div>
+    </div>
+
+    <!-- SECTION 3: Backend – Node.js & Express -->
+    <h2 class="section-title">🖥️ 3. Backend Development (Node.js + Express)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Node.js Basics</h3><div class="code-block">console.log("Hello Node");<br>const fs = require('fs');<br>fs.readFile('file.txt', (err, data) => { ... });</div><div class="explain">JavaScript runtime for server-side. Non-blocking, event-driven.</div></div>
+        <div class="card"><h3>🔹 Express Server</h3><div class="code-block">const express = require('express');<br>const app = express();<br><br>app.get('/', (req, res) => {<br>    res.send('Hello World');<br>});<br><br>app.listen(3000);</div></div>
+        <div class="card"><h3>🔹 REST API & Middleware</h3><div class="code-block">app.use(express.json());<br><br>app.get('/api/users', (req, res) => {<br>    res.json([{ id: 1, name: 'Alice' }]);<br>});<br><br>app.post('/api/users', (req, res) => {<br>    const newUser = req.body;<br>    // save to database<br>    res.status(201).json(newUser);<br>});</div></div>
+    </div>
+
+    <!-- SECTION 4: Databases -->
+    <h2 class="section-title">🗄️ 4. Databases – SQL & NoSQL</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 SQL (PostgreSQL / MySQL)</h3><div class="code-block">CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(100));<br>INSERT INTO users (name) VALUES ('Alice');<br>SELECT * FROM users WHERE id = 1;</div><div class="explain">Relational, ACID compliance. Use with Node.js via pg or mysql2.</div></div>
+        <div class="card"><h3>🔹 MongoDB (NoSQL)</h3><div class="code-block">// Using Mongoose (ODM)<br>const userSchema = new mongoose.Schema({ name: String });<br>const User = mongoose.model('User', userSchema);<br>const user = new User({ name: 'Alice' });<br>await user.save();</div><div class="explain">Document-oriented, flexible schema, great for scaling.</div></div>
+        <div class="card"><h3>🔹 Connecting Backend to DB</h3><div class="code-block">// MongoDB with Express<br>app.get('/api/users', async (req, res) => {<br>    const users = await User.find();<br>    res.json(users);<br>});</div></div>
+    </div>
+
+    <!-- SECTION 5: Version Control – Git & GitHub -->
+    <h2 class="section-title">📦 5. Version Control with Git</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Basic Commands</h3><div class="code-block">git init<br>git add .<br>git commit -m "Initial commit"<br>git remote add origin https://github.com/user/repo.git<br>git push -u origin main</div><div class="explain">Track changes, collaborate, branch, merge.</div></div>
+        <div class="card"><h3>🔹 Branching & Workflow</h3><div class="code-block">git checkout -b feature-branch<br>git add .<br>git commit -m "Add feature"<br>git checkout main<br>git merge feature-branch</div></div>
+    </div>
+
+    <!-- SECTION 6: Deployment & Hosting -->
+    <h2 class="section-title">🚀 6. Deployment</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Static Hosting (Vercel, Netlify, GitHub Pages)</h3><div class="code-block">npm run build   # for React/Vue<br># Deploy to Vercel: vercel --prod</div><div class="explain">Frontend-only or static sites. Continuous deployment from Git.</div></div>
+        <div class="card"><h3>🔹 Backend Hosting (Render, Railway, Heroku)</h3><div class="code-block"># Create a Procfile<br>web: node server.js<br># Set environment variables<br># Connect to database (MongoDB Atlas, Supabase)</div></div>
+        <div class="card"><h3>🔹 Full-Stack on VPS (DigitalOcean, AWS)</h3><div class="explain">Use Nginx as reverse proxy, PM2 for Node.js, SSL with Let's Encrypt.</div></div>
+    </div>
+
+    <!-- SECTION 7: Full-Stack Project Example -->
+    <h2 class="section-title">📁 7. Complete MERN Stack Example</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Folder Structure & Setup</h3><div class="code-block">my-app/<br>├── client/     (React frontend)<br>├── server/     (Node + Express backend)<br>├── package.json</div></div>
+        <div class="card"><h3>🔹 Backend (server/index.js)</h3><div class="code-block">const express = require('express');<br>const mongoose = require('mongoose');<br>const cors = require('cors');<br><br>const app = express();<br>app.use(cors());<br>app.use(express.json());<br><br>mongoose.connect('mongodb://localhost:27017/test');<br><br>const Item = mongoose.model('Item', { name: String });<br><br>app.get('/api/items', async (req, res) => {<br>    res.json(await Item.find());<br>});<br><br>app.post('/api/items', async (req, res) => {<br>    const newItem = new Item(req.body);<br>    await newItem.save();<br>    res.json(newItem);<br>});<br><br>app.listen(5000);</div></div>
+        <div class="card"><h3>🔹 Frontend (client/App.js)</h3><div class="code-block">import { useState, useEffect } from 'react';<br>import axios from 'axios';<br><br>function App() {<br>    const [items, setItems] = useState([]);<br>    const [name, setName] = useState('');<br><br>    useEffect(() => {<br>        axios.get('http://localhost:5000/api/items')<br>            .then(res => setItems(res.data));<br>    }, []);<br><br>    const addItem = async () => {<br>        const res = await axios.post('http://localhost:5000/api/items', { name });<br>        setItems([...items, res.data]);<br>        setName('');<br>    };<br><br>    return (<br>        &lt;div&gt;<br>            &lt;input value={name} onChange={e => setName(e.target.value)} /&gt;<br>            &lt;button onClick={addItem}&gt;Add&lt;/button&gt;<br>            &lt;ul&gt;{items.map(i => &lt;li key={i._id}&gt;{i.name}&lt;/li&gt;)}&lt;/ul&gt;<br>        &lt;/div&gt;<br>    );<br>}</div></div>
+    </div>
+
+    <!-- SECTION 8: Essential Tools & Best Practices -->
+    <h2 class="section-title">🛠️ 8. Developer Tools & Best Practices</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Package Managers (npm, yarn)</h3><div class="code-block">npm init -y<br>npm install express mongoose cors<br>npm install -D nodemon</div></div>
+        <div class="card"><h3>🔹 Environment Variables (.env)</h3><div class="code-block">require('dotenv').config();<br>const PORT = process.env.PORT || 3000;</div></div>
+        <div class="card"><h3>🔹 ESLint & Prettier</h3><div class="explain">Code linting and formatting for consistency.</div></div>
+        <div class="card"><h3>🔹 Chrome DevTools & Postman</h3><div class="explain">Inspect, debug, test API endpoints.</div></div>
+    </div>
+
+    <!-- SECTION 9: Next Steps & Frameworks -->
+    <h2 class="section-title">📚 9. Beyond Basics – Advanced Topics</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 TypeScript</h3><div class="code-block">interface User { name: string; age?: number; }<br>const greet = (user: User) => `Hello ${user.name}`;</div><div class="explain">Static typing for JavaScript.</div></div>
+        <div class="card"><h3>🔹 Next.js (React framework)</h3><div class="explain">Server-side rendering, static site generation, API routes.</div></div>
+        <div class="card"><h3>🔹 Authentication (JWT, OAuth)</h3><div class="code-block">jwt.sign({ userId: user.id }, process.env.JWT_SECRET);<br>// Pass token in Authorization header</div></div>
+        <div class="card"><h3>🔹 WebSockets (Socket.io)</h3><div class="explain">Real-time communication for chat, live updates.</div></div>
+    </div>
+
+    <!-- Cheat Sheet & Summary -->
+    <hr>
+    <div style="background: #eef2ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 Web Development Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Frontend</strong><br>HTML5, CSS3 (Flex/Grid), JavaScript (ES6+), React</div>
+            <div><strong>🔹 Backend</strong><br>Node.js, Express.js, REST API, JWT, WebSockets</div>
+            <div><strong>🔹 Databases</strong><br>MongoDB (Mongoose), PostgreSQL, MySQL</div>
+            <div><strong>🔹 Tools</strong><br>Git, npm, VS Code, Postman, Vercel, Render</div>
+            <div><strong>🔹 Deployment</strong><br>Netlify, Vercel (frontend), Railway, AWS (full-stack)</div>
+            <div><strong>🔹 Concepts</strong><br>MVC, CRUD, authentication, authorization, middleware, environment variables</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Build projects – start with a simple portfolio, then a full-stack app. Use Git for every project. Learn to read documentation. Follow security best practices (sanitize inputs, use HTTPS). Keep learning and stay curious!
+        </div>
+    </div>
+
+    <!-- Final Projects -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Build These Web Development Projects</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Personal Portfolio (HTML, CSS, JS) – responsive, mobile-first</li>
+            <li>Weather App (Frontend + API) – uses fetch to display weather</li>
+            <li>Task Manager (MERN stack) – full CRUD with authentication</li>
+            <li>Blog Platform (React + Node + MongoDB) – comments, user roles</li>
+            <li>E-commerce Store (Next.js + Stripe) – product listing, cart, checkout</li>
+            <li>Real-time Chat App (Socket.io + Express + React)</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Next Steps:</strong> Build a portfolio with 3-5 projects. Learn deployment (Vercel, Render). Contribute to open source. You now have a complete web development roadmap – start coding and build the web!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🌐 Complete Web Development Course – From zero to full-stack developer.<br>
+    Click "Home" to return to main website. Happy building!</p>
+</footer>
+
+</body>
+</html>

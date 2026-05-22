@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Complete JavaScript Course | Master Web Interactivity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fef8e7;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: #668b64;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #fcf3da;
+            border-left: 8px solid #e67e22;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #c0392b;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #c0392b;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #f39c12;
+            padding-left: 0.7rem;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 0.9rem;
+            border-left: 3px solid #f4b942;
+        }
+
+        .tip {
+            background: #e8f0f5;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: #c0392b;
+            border-bottom: 3px solid #fad7a0;
+            display: inline-block;
+        }
+
+        footer {
+            background: #e2dfd3;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #2d2b1f;
+        }
+
+        @media (max-width: 750px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 Course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">🟨 Complete JavaScript Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <div class="welcome-box">
+        <h2>🟨 Complete JavaScript – The Language of the Web</h2>
+        <p>JavaScript is the backbone of interactive web pages. This course covers everything: variables, functions, arrays, objects, DOM, events, async programming, ES6+, and more. Clear examples, no fluff. Let's become JS masters!</p>
+    </div>
+
+    <!-- SECTION 1: Basics -->
+    <h2 class="section-title">📖 1. JavaScript Fundamentals</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Variables (var, let, const)</h3><div class="code-block">var old = "function-scoped";<br>let name = "block-scoped";<br>const PI = 3.14; // cannot reassign</div><div class="explain">Use let and const (ES6). var has function scope, avoid.</div></div>
+        <div class="card"><h3>🔹 Data Types & typeof</h3><div class="code-block">let num = 42;         // number<br>let str = "Hello";    // string<br>let bool = true;      // boolean<br>let obj = {a:1};      // object<br>let arr = [1,2,3];    // object<br>let nothing = null;   // object (quirk)<br>let notDefined;       // undefined<br>console.log(typeof num);</div></div>
+        <div class="card"><h3>🔹 Operators & Type Coercion</h3><div class="code-block">+ - * / % ++ --<br>> < >= <= == === != !==<br>&& || !<br>// == (value only), === (value + type)<br>console.log(5 == '5');  // true<br>console.log(5 === '5'); // false</div></div>
+        <div class="card"><h3>🔹 Control Flow</h3><div class="code-block">if (age >= 18) {<br>    console.log("Adult");<br>} else {<br>    console.log("Minor");<br>}<br><br>for (let i=0; i<5; i++) { }<br>while (condition) { }<br>switch(day) { case 1: ... }</div></div>
+    </div>
+
+    <!-- SECTION 2: Functions -->
+    <h2 class="section-title">🧩 2. Functions</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Function Declarations & Expressions</h3><div class="code-block">// Declaration (hoisted)<br>function add(a,b) { return a+b; }<br><br>// Expression<br>const multiply = function(a,b) { return a*b; };</div></div>
+        <div class="card"><h3>🔹 Arrow Functions (ES6+)</h3><div class="code-block">const square = (x) => x * x;<br>const greet = name => `Hello ${name}`;<br>const sum = (a,b) => {<br>    return a+b;<br>};</div><div class="explain">Shorter syntax, no own 'this' binding.</div></div>
+        <div class="card"><h3>🔹 Parameters & Default Values</h3><div class="code-block">function greet(name = "Guest") {<br>    console.log(`Hi ${name}`);<br>}<br>// Rest parameters<br>function sumAll(...nums) {<br>    return nums.reduce((a,b)=>a+b,0);<br>}</div></div>
+        <div class="card"><h3>🔹 Closures & Scope</h3><div class="code-block">function outer() {<br>    let count = 0;<br>    return function inner() {<br>        count++;<br>        return count;<br>    };<br>}<br>const counter = outer();<br>counter(); // 1</div><div class="explain">Inner function remembers outer variables even after outer returns.</div></div>
+    </div>
+
+    <!-- SECTION 3: Arrays & Objects -->
+    <h2 class="section-title">📊 3. Arrays & Objects</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Arrays Methods</h3><div class="code-block">let arr = [1,2,3];<br>arr.push(4);          // add to end<br>arr.pop();            // remove end<br>arr.unshift(0);       // add to start<br>arr.shift();          // remove start<br>arr.map(x => x*2);<br>arr.filter(x => x>1);<br>arr.reduce((sum,x)=>sum+x,0);<br>arr.find(x => x===2);<br>arr.includes(3);</div></div>
+        <div class="card"><h3>🔹 Object Literals & Methods</h3><div class="code-block">const person = {<br>    name: "Alice",<br>    age: 25,<br>    greet() {<br>        console.log(`Hi, I'm ${this.name}`);<br>    }<br>};<br>person.greet();<br>// Dynamic keys<br>const key = "score";<br>person[key] = 100;</div></div>
+        <div class="card"><h3>🔹 Destructuring & Spread/Rest</h3><div class="code-block">const [first, second] = [10,20];<br>const {name, age} = person;<br><br>const arr1 = [1,2];<br>const arr2 = [...arr1, 3,4];  // spread<br>function log(...args) { }      // rest</div></div>
+    </div>
+
+    <!-- SECTION 4: DOM Manipulation -->
+    <h2 class="section-title">🌳 4. DOM (Document Object Model)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Selecting Elements</h3><div class="code-block">document.getElementById('id');<br>document.querySelector('.class');<br>document.querySelectorAll('div');<br>document.getElementsByClassName('class');</div></div>
+        <div class="card"><h3>🔹 Changing Content & Attributes</h3><div class="code-block">element.textContent = "New text";<br>element.innerHTML = "&lt;strong&gt;HTML&lt;/strong&gt;";<br>element.setAttribute('src', 'image.jpg');<br>element.classList.add('active');<br>element.style.color = 'red';</div></div>
+        <div class="card"><h3>🔹 Creating & Removing Elements</h3><div class="code-block">const div = document.createElement('div');<br>div.textContent = 'Hello';<br>parent.appendChild(div);<br>parent.removeChild(div);<br>// or element.remove()</div></div>
+    </div>
+
+    <!-- SECTION 5: Events -->
+    <h2 class="section-title">🎯 5. Events</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Adding Event Listeners</h3><div class="code-block">const btn = document.querySelector('button');<br>btn.addEventListener('click', () => {<br>    alert('Clicked!');<br>});<br><br>// Common events: click, mouseover, keydown, submit, load, scroll</div></div>
+        <div class="card"><h3>🔹 Event Object</h3><div class="code-block">btn.addEventListener('click', (e) => {<br>    console.log(e.target);  // element clicked<br>    console.log(e.type);<br>    e.preventDefault();     // stop default action<br>});</div></div>
+        <div class="card"><h3>🔹 Event Delegation</h3><div class="code-block">document.querySelector('#parent').addEventListener('click', (e) => {<br>    if (e.target.matches('.child')) {<br>        console.log('Child clicked');<br>    }<br>});</div></div>
+    </div>
+
+    <!-- SECTION 6: Asynchronous JS -->
+    <h2 class="section-title">⏳ 6. Asynchronous Programming</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Callbacks</h3><div class="code-block">function fetchData(callback) {<br>    setTimeout(() => {<br>        callback("Data loaded");<br>    }, 1000);<br>}<br>fetchData(data => console.log(data));</div></div>
+        <div class="card"><h3>🔹 Promises</h3><div class="code-block">const promise = new Promise((resolve, reject) => {<br>    setTimeout(() => resolve("Success"), 1000);<br>});<br>promise.then(result => console.log(result))<br>       .catch(err => console.error(err));<br><br>// Promise.all, Promise.race</div></div>
+        <div class="card"><h3>🔹 Async/Await (ES8+)</h3><div class="code-block">async function getData() {<br>    try {<br>        const result = await fetch('https://api.example.com');<br>        const data = await result.json();<br>        console.log(data);<br>    } catch(error) {<br>        console.error(error);<br>    }<br>}</div><div class="explain">Cleaner promise syntax. Always use try/catch.</div></div>
+        <div class="card"><h3>🔹 Fetch API</h3><div class="code-block">fetch('https://jsonplaceholder.typicode.com/posts')<br>    .then(res => res.json())<br>    .then(data => console.log(data));</div></div>
+    </div>
+
+    <!-- SECTION 7: ES6+ Modern Features -->
+    <h2 class="section-title">✨ 7. Modern JavaScript (ES6+)</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Template Literals</h3><div class="code-block">const name = "John";<br>const msg = `Hello ${name}, <br>           welcome!`;</div></div>
+        <div class="card"><h3>🔹 Classes</h3><div class="code-block">class Animal {<br>    constructor(name) { this.name = name; }<br>    speak() { console.log(`${this.name} makes noise`); }<br>}<br>class Dog extends Animal {<br>    speak() { console.log(`${this.name} barks`); }<br>}</div></div>
+        <div class="card"><h3>🔹 Modules (import/export)</h3><div class="code-block">// math.js<br>export const add = (a,b) => a+b;<br>// main.js<br>import { add } from './math.js';</div><div class="explain">Use type="module" in script tag.</div></div>
+        <div class="card"><h3>🔹 Optional Chaining & Nullish Coalescing</h3><div class="code-block">const user = {};<br>console.log(user?.profile?.name);  // undefined<br>const value = input ?? "default";  // if null/undefined</div></div>
+        <div class="card"><h3>🔹 Map, Set, WeakMap, WeakSet</h3><div class="code-block">const map = new Map();<br>map.set('key', 'value');<br>const set = new Set([1,2,2,3]); // unique values</div></div>
+    </div>
+
+    <!-- SECTION 8: Browser APIs & Advanced -->
+    <h2 class="section-title">🌐 8. Browser APIs & Advanced</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 LocalStorage & SessionStorage</h3><div class="code-block">localStorage.setItem('key', 'value');<br>const val = localStorage.getItem('key');<br>sessionStorage.setItem('temp', 'data');<br>localStorage.removeItem('key');</div></div>
+        <div class="card"><h3>🔹 Timers (setTimeout, setInterval)</h3><div class="code-block">setTimeout(() => console.log("After 1s"), 1000);<br>const interval = setInterval(() => console.log("tick"), 1000);<br>clearInterval(interval);</div></div>
+        <div class="card"><h3>🔹 JSON</h3><div class="code-block">const obj = { name: "Alice" };<br>const jsonStr = JSON.stringify(obj);<br>const newObj = JSON.parse(jsonStr);</div></div>
+        <div class="card"><h3>🔹 Error Handling (try/catch/finally)</h3><div class="code-block">try {<br>    throw new Error("Oops");<br>} catch (err) {<br>    console.log(err.message);<br>} finally {<br>    console.log("Cleanup");<br>}</div></div>
+        <div class="card"><h3>🔹 Regular Expressions</h3><div class="code-block">const pattern = /hello/i;<br>pattern.test("Hello world"); // true<br>"abc123".match(/\d+/);  // ["123"]</div></div>
+    </div>
+
+    <!-- SECTION 9: Debugging & Best Practices -->
+    <h2 class="section-title">🐞 9. Debugging & Best Practices</h2>
+    <div class="topic-grid">
+        <div class="card"><h3>🔹 Console Methods</h3><div class="code-block">console.log, console.error, console.warn, console.table, console.time, console.group</div></div>
+        <div class="card"><h3>🔹 Debugger & DevTools</h3><div class="explain">Use 'debugger;' statement. Sources tab breakpoints.</div></div>
+        <div class="card"><h3>🔹 Strict Mode</h3><div class="code-block">// At top of file/function<br>"use strict";<br>// catches common errors</div></div>
+    </div>
+
+    <!-- Cheat Sheet & Summary -->
+    <hr>
+    <div style="background: #fcf3da; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1rem;">
+        <h3>📚 JavaScript Cheat Sheet – Quick Reference</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; margin-top: 1rem;">
+            <div><strong>🔹 Variables</strong><br>let, const, var, scope</div>
+            <div><strong>🔹 Functions</strong><br>declaration, arrow, params, closure</div>
+            <div><strong>🔹 Arrays</strong><br>map, filter, reduce, forEach, push, pop, slice, splice</div>
+            <div><strong>🔹 Objects</strong><br>dot/bracket notation, destructuring, spread, Object.keys/values/entries</div>
+            <div><strong>🔹 DOM</strong><br>querySelector, addEventListener, innerHTML, classList, createElement, appendChild</div>
+            <div><strong>🔹 Async</strong><br>Promise, async/await, fetch, then/catch</div>
+            <div><strong>🔹 ES6+</strong><br>arrow, classes, modules, template literals, optional chaining, nullish coalescing</div>
+        </div>
+        <div class="tip" style="margin-top: 1rem;">
+            💡 <strong>Pro Tips:</strong> Use const by default, let when reassignment needed. Learn array methods properly. Understand closures and 'this'. Practice async/await with real APIs. Use browser DevTools heavily.
+        </div>
+    </div>
+
+    <!-- Final Projects -->
+    <div style="background:#f0f4ff; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>💪 Build These JavaScript Projects</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Interactive To-Do List (DOM + LocalStorage)</li>
+            <li>Weather App using Fetch API (async/await)</li>
+            <li>Memory Card Game (events, DOM manipulation)</li>
+            <li>Calculator (functions, eval not recommended – use logic)</li>
+            <li>Quiz App with timer (setInterval)</li>
+            <li>GitHub Profile Finder (fetch + async/await)</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">🎯 <strong>Next Steps:</strong> Learn React, Vue, or Node.js. JavaScript runs everywhere. You now have a complete JS roadmap – start building interactive web apps!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🟨 Complete JavaScript Course – The Language of the Web.<br>
+    Click "Home" to return to main website. Happy coding!</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>C++ for Beginners | Easy Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fefcf5;
+            color: #1f2e3a;
+            line-height: 1.6;
+        }
+
+        /* header consistent with main site */
+        .top-bar {
+            background: #0b2b3b;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: #f0f3f8;
+            text-decoration: none;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffda7c;
+            text-decoration: underline;
+        }
+
+        /* main content */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .welcome-box {
+            background: #e6f4ff;
+            border-left: 8px solid #1e6f5c;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.9rem;
+            color: #0c4e46;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-box p {
+            font-size: 1.1rem;
+        }
+
+        .simple-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e9f0;
+        }
+
+        .simple-card h3 {
+            font-size: 1.6rem;
+            color: #1a5d6c;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .code-block {
+            background: #1e2a36;
+            color: #eef4ff;
+            padding: 1rem 1.2rem;
+            border-radius: 1rem;
+            overflow-x: auto;
+            font-family: 'Courier New', 'Fira Code', monospace;
+            font-size: 0.95rem;
+            margin: 1rem 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .explain {
+            background: #f9f2e0;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #f4b942;
+        }
+
+        .tip {
+            background: #dff3e9;
+            padding: 0.7rem 1rem;
+            border-radius: 0.8rem;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 1px solid #dce5ec;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            background: #d9e2ec;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #1f4e5e;
+        }
+
+        @media (max-width: 700px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .welcome-box h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        <h1>📘 Course website</h1>
+    </div>
+    <div class="nav-links">
+        <a href="home.html">🏠 Home</a>
+        <a href="courses.html">ℹ️ course</a>
+        <a href="#" style="color: #ffda7c;">📖 C++ Course</a>
+    </div>
+</header>
+
+<main class="container">
+    <!-- friendly intro -->
+    <div class="welcome-box">
+        <h2>✨ Welcome to C++ Programming ✨</h2>
+        <p>C++ is a powerful language used to make games, apps, and even operating systems. Don't worry — we'll learn it step by step, with simple examples and clear explanations. No prior experience needed!</p>
+    </div>
+
+    <!-- LESSON 1 - VERY SIMPLE -->
+    <div class="simple-card">
+        <h3>📌 1. Your First C++ Program</h3>
+        <p>Let's write a tiny program that prints a message. Every C++ program needs a special function called <code>main()</code>. The computer starts from there.</p>
+        <div class="code-block">
+            #include &lt;iostream&gt;<br>
+            using namespace std;<br><br>
+            int main() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cout << "Hello, I'm learning C++!";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+        </div>
+        <div class="explain">
+            🔍 <strong>Explanation:</strong> <br>
+            • <code>#include &lt;iostream&gt;</code> → gives us the power to print text.<br>
+            • <code>using namespace std;</code> → lets us write <code>cout</code> instead of <code>std::cout</code>.<br>
+            • <code>cout << "..."</code> → prints text to the screen.<br>
+            • <code>return 0;</code> → tells the program "everything finished fine".
+        </div>
+        <div class="tip">
+            💡 <strong>Try it:</strong> Change the text inside the quotes and see what happens!
+        </div>
+    </div>
+
+    <!-- LESSON 2: VARIABLES (boxes for data) -->
+    <div class="simple-card">
+        <h3>📦 2. Variables – Storing Information</h3>
+        <p>Variables are like labeled boxes where we store numbers, words, or true/false values.</p>
+        <div class="code-block">
+            int age = 16;           // whole number<br>
+            double price = 19.99;   // decimal number<br>
+            char grade = 'A';       // single character<br>
+            string name = "Sophia"; // text (needs #include &lt;string&gt;)<br>
+            bool passed = true;     // true or false<br><br>
+            cout << "Name: " << name << ", Age: " << age;
+        </div>
+        <div class="explain">
+            📖 <strong>Simple words:</strong> <br>
+            • <code>int</code> → stores integers like 5, 100, -3.<br>
+            • <code>double</code> → stores decimals like 3.14.<br>
+            • <code>string</code> → stores words or sentences.<br>
+            • <code>bool</code> → stores true/false.
+        </div>
+    </div>
+
+    <!-- LESSON 3: IF/ELSE (decisions) -->
+    <div class="simple-card">
+        <h3>⚡ 3. Making Decisions with if/else</h3>
+        <p>Your program can take different paths depending on a condition.</p>
+        <div class="code-block">
+            int score = 85;<br><br>
+            if (score >= 60) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cout << "You passed! 🎉";<br>
+            } else {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cout << "Keep studying!";<br>
+            }
+        </div>
+        <div class="explain">
+            🧠 <strong>How it works:</strong> If the condition inside <code>( )</code> is true, the first block runs. Otherwise, the <code>else</code> block runs.
+        </div>
+        <div class="tip">
+            ⭐ <strong>Try changing</strong> the <code>score</code> to 45 and see what message appears.
+        </div>
+    </div>
+
+    <!-- LESSON 4: LOOPS (repeat actions) -->
+    <div class="simple-card">
+        <h3>🔄 4. Loops – Doing Things Repeatedly</h3>
+        <p>When you want to print "Hello" 5 times, a loop saves the day.</p>
+        <div class="code-block">
+            for (int i = 1; i <= 5; i++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cout << "Hello number " << i << endl;<br>
+            }
+        </div>
+        <div class="explain">
+            🔁 <strong>Explanation:</strong> <br>
+            • <code>int i = 1</code> → start counting from 1.<br>
+            • <code>i <= 5</code> → keep going as long as i is less or equal to 5.<br>
+            • <code>i++</code> → increase i by 1 each time.<br>
+            • The loop will repeat 5 times.
+        </div>
+        <div class="tip">
+            🧪 <strong>Challenge:</strong> Change <code>i <= 5</code> to <code>i <= 10</code> and see the output!
+        </div>
+    </div>
+
+    <!-- LESSON 5: FUNCTIONS (reusable code) -->
+    <div class="simple-card">
+        <h3>🧩 5. Functions – Group Code into Blocks</h3>
+        <p>Functions let you write code once and use it many times, like a recipe.</p>
+        <div class="code-block">
+            // define a function<br>
+            void sayHello() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cout << "Hello there!" << endl;<br>
+            }<br><br>
+            int main() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;sayHello(); // call the function<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;sayHello(); // call it again<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+        </div>
+        <div class="explain">
+            📚 <strong>Simple terms:</strong> <br>
+            • <code>void</code> means the function doesn't return a value.<br>
+            • <code>sayHello()</code> is the function name.<br>
+            • In <code>main()</code> we "call" the function by writing its name followed by <code>()</code>.
+        </div>
+    </div>
+
+    <!-- LESSON 6: CLASSES (basic OOP) -->
+    <div class="simple-card">
+        <h3>🏗️ 6. Classes – Blueprints for Objects</h3>
+        <p>A class describes what something <strong>has</strong> (attributes) and <strong>does</strong> (methods).</p>
+        <div class="code-block">
+            class Car {<br>
+            public:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;string brand;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;int year;<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;void honk() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << "Beep beep!";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            };<br><br>
+            int main() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Car myCar;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;myCar.brand = "Toyota";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;myCar.year = 2022;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;myCar.honk();<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+        </div>
+        <div class="explain">
+            🚗 <strong>What's happening?</strong><br>
+            • The <code>Car</code> class is a blueprint. It has <code>brand</code>, <code>year</code>, and a <code>honk()</code> action.<br>
+            • <code>myCar</code> is an actual car object created from that blueprint.<br>
+            • We use dot <code>.</code> to access the object's properties and actions.
+        </div>
+    </div>
+
+    <!-- EXTRA: Simple full example -->
+    <div class="simple-card">
+        <h3>📝 Full Example – Mini Quiz Program</h3>
+        <p>Let's combine everything into a small, useful program.</p>
+        <div class="code-block">
+            #include &lt;iostream&gt;<br>
+            using namespace std;<br><br>
+            int main() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;int answer;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cout << "What is 5 + 3? ";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;cin >> answer;<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if (answer == 8) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << "Correct! Well done.\n";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << "Oops. The correct answer is 8.\n";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }
+        </div>
+        <div class="explain">
+            🧑‍💻 <strong>New thing:</strong> <code>cin >> answer</code> reads what the user types and stores it in the variable <code>answer</code>.
+        </div>
+        <div class="tip">
+            🎯 <strong>Your turn:</strong> Change the question to "10 - 4" and adjust the condition!
+        </div>
+    </div>
+
+    <!-- Quick summary cards -->
+    <hr>
+    <h3 style="color: #1b5e6e; margin: 1rem 0 0.5rem;">📚 Quick Summary (Remember These!)</h3>
+    <div class="grid-2">
+        <div style="background:#fff6e8; border-radius: 1rem; padding: 1rem;">
+            <strong>🔹 cout</strong> → prints output: <code>cout << "text";</code><br>
+            <strong>🔹 cin</strong> → gets input: <code>cin >> variable;</code><br>
+            <strong>🔹 if/else</strong> → decision making<br>
+            <strong>🔹 for loop</strong> → repetition
+        </div>
+        <div style="background:#eef3fa; border-radius: 1rem; padding: 1rem;">
+            <strong>🔹 int, double, string, bool</strong> → data types<br>
+            <strong>🔹 function</strong> → reusable code block<br>
+            <strong>🔹 class</strong> → blueprint for objects<br>
+            <strong>🔹 #include</strong> → add extra features
+        </div>
+    </div>
+
+    <!-- practice suggestions -->
+    <div style="background:#e0f2f1; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3>✏️ Practice Ideas (Easy → Medium)</h3>
+        <ul style="margin-left: 1.5rem;">
+            <li>Write a program that asks for your name and greets you with "Hello, [name]!"</li>
+            <li>Create a simple calculator that adds two numbers entered by the user.</li>
+            <li>Make a loop that prints numbers from 10 down to 1.</li>
+            <li>Define a class <code>Book</code> with title and author, then create two book objects.</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">💪 <strong>Remember:</strong> Making mistakes is part of learning. Try changing code and see what happens!</p>
+    </div>
+</main>
+
+<footer>
+    <p>🌟 C++ made simple — keep coding, stay curious! 🌟<br>
+    Click "Home" to go back to main website. This course page is your starting point to master C++.</p>
+</footer>
+
+</body>
+</html>

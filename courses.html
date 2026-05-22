@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.s2{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  gap: 20px;
+  background-color: beige;
+}
+.s2 div{
+  width: 300px;
+  height: 300px;
+  background-color: burlywood;
+  box-shadow: 5px 5px 5px ;
+  margin-top: 10px;
+  border-radius: 20px; 
+  border: 4px solid whitesmoke;
+  margin-left: 57px
+}
+.d1 h1{
+  text-align: center;
+  font-size: 50px;
+}
+.d2 h1{  
+  text-align: center;
+  font-size: 50px;
+}
+.d3 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d4 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d5 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d6 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d7 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d8 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d9 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d10 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d11 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d12 h1{
+  font-size: 50px;
+  text-align: center;
+}
+.d1 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d2 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d3 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d4 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d5 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d6 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d7 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d8 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d9 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d10 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d11 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+.d12 button{
+    margin-left: 106px;
+    width: 97px;
+    height: 33px;
+}
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: bisque;
+}
+/* === RESPONSIVE MEDIA QUERIES (adds responsiveness, preserves design) === */
+
+        /* Laptops & small desktops (max-width: 1200px) */
+        @media (max-width: 1200px) {
+            .s2 {
+                gap: 15px;
+            }
+            .s2 div {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* Tablets (max-width: 992px) */
+        @media (max-width: 992px) {
+            .s2 {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                height: auto;
+                padding: 20px 10px;
+            }
+            .s2 div {
+                width: 280px;
+                height: 280px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .d1 h1, .d2 h1, .d3 h1, .d4 h1, .d5 h1, .d6 h1,
+            .d7 h1, .d8 h1, .d9 h1, .d10 h1, .d11 h1, .d12 h1 {
+                font-size: 40px;
+            }
+            .d1 button, .d2 button, .d3 button, .d4 button,
+            .d5 button, .d6 button, .d7 button, .d8 button,
+            .d9 button, .d10 button, .d11 button, .d12 button {
+                margin-left: 0;
+                display: block;
+                margin: 15px auto 0;
+                width: 100px;
+            }
+        }
+
+        /* Small tablets & large phones (max-width: 768px) */
+        @media (max-width: 768px) {
+            .s2 {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 12px;
+                padding: 15px 8px;
+            }
+            .s2 div {
+                width: 240px;
+                height: 240px;
+            }
+            .d1 h1, .d2 h1, .d3 h1, .d4 h1, .d5 h1, .d6 h1,
+            .d7 h1, .d8 h1, .d9 h1, .d10 h1, .d11 h1, .d12 h1 {
+                font-size: 32px;
+            }
+            .d1 button, .d2 button, .d3 button, .d4 button,
+            .d5 button, .d6 button, .d7 button, .d8 button,
+            .d9 button, .d10 button, .d11 button, .d12 button {
+                width: 90px;
+                height: 32px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Mobile phones (max-width: 576px) */
+        @media (max-width: 576px) {
+            .s2 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                height: auto;
+                padding: 20px 12px;
+            }
+            .s2 div {
+                width: 90%;
+                max-width: 280px;
+                height: auto;
+                min-height: 240px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 15px;
+            }
+            .d1 h1, .d2 h1, .d3 h1, .d4 h1, .d5 h1, .d6 h1,
+            .d7 h1, .d8 h1, .d9 h1, .d10 h1, .d11 h1, .d12 h1 {
+                font-size: 28px;
+                margin: 15px 0 10px;
+            }
+            .d1 button, .d2 button, .d3 button, .d4 button,
+            .d5 button, .d6 button, .d7 button, .d8 button,
+            .d9 button, .d10 button, .d11 button, .d12 button {
+                width: 100px;
+                height: 35px;
+                font-size: 0.9rem;
+                margin-top: 10px;
+            }
+            footer {
+                height: auto;
+                padding: 20px;
+            }
+        }
+
+        /* Very small devices (max-width: 400px) */
+        @media (max-width: 400px) {
+            .s2 div {
+                width: 95%;
+                max-width: 260px;
+                min-height: 220px;
+            }
+            .d1 h1, .d2 h1, .d3 h1, .d4 h1, .d5 h1, .d6 h1,
+            .d7 h1, .d8 h1, .d9 h1, .d10 h1, .d11 h1, .d12 h1 {
+                font-size: 24px;
+            }
+            .d1 button, .d2 button, .d3 button, .d4 button,
+            .d5 button, .d6 button, .d7 button, .d8 button,
+            .d9 button, .d10 button, .d11 button, .d12 button {
+                width: 85px;
+                height: 30px;
+                font-size: 0.75rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="h1">Course website</h1>
+        <nav>
+            <!-- <a href="home.html">Home</a> -->
+            <!-- <a href="courses.html">courses</a> -->
+            <!-- <a href="about.html">About</a> -->
+
+    </header>
+    <main>
+                 <section class="s2" id="Courses">
+               <div class="d1">
+                <h1>c</h1>
+                   <button>click</button>
+               </div>
+               <div class="d2">
+                <h1>DSA</h1>
+                   <button>click</button>
+               </div>
+               <div class="d3">
+                <h1>python</h1>
+                   <button>click</button>
+               </div>
+               <div class="d4">
+                <h1>java</h1>
+                   <button>click</button>
+               </div>
+               <div class="d5">
+                <h1>Html</h1>
+                   <button>click</button>
+               </div>
+               <div class="d6">
+                <h1>css</h1>
+                   <button>click</button>
+               </div>
+               <div class="d7">
+                <h1>java script</h1>
+                   <button>click</button>
+               </div>
+               <div class="d8">
+                <h1>Django</h1>
+                   <button>click</button>
+               </div>
+               <div class="d9">
+                <h1>SQL</h1>
+                   <button>click</button>
+               </div>   
+               <div class="d10">
+                <h1>Data science</h1>
+                   <button>click</button>
+               </div>
+               <div class="d11">
+                <h1>web Development</h1>
+                   <button>click</button>
+               </div>
+               <div class="d12">
+                <h1>c++</h1>
+                   <button>click</button>
+               </div>
+         </section>
+    </main>
+
+    <script>
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt1 = document.querySelector('.d1 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt1) {
+                clickBt1.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'c.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickButton) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'c.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt2 = document.querySelector('.d2 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt2) {
+                clickBt2.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'DSA.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt2) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'DSA.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt3 = document.querySelector('.d3 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt3) {
+                clickBt3.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'python.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt3) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'python.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt4= document.querySelector('.d4 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt4) {
+                clickBt4.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'java.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt4) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'java.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt5 = document.querySelector('.d5 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt5) {
+                clickBt5.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'html.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt5) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'html.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt6 = document.querySelector('.d6 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt6) {
+                clickBt6.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'css.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt6) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'css.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt7 = document.querySelector('.d7 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt7) {
+                clickBt7.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'javascript.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt7) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'javascript.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt8 = document.querySelector('.d8 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt8) {
+                clickBt8.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'Django.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt8) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'Django.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt9 = document.querySelector('.d9 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt9) {
+                clickBt9.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'sql.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt9) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'sql.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt10 = document.querySelector('.d10 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt10) {
+                clickBt10.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'datascience.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt10) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'datascience.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt11 = document.querySelector('.d11 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt11) {
+                clickBt11.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'webdevelopment.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt11) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'webdevelopment.html';
+                });
+            }
+        });
+    })();
+    (function() {
+        // Wait for the DOM to be fully loaded to ensure button exists
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the button inside .box (the main courses button)
+            const clickBt12 = document.querySelector('.d12 button');
+            
+            // If button exists, attach click event to open the course file
+            if (clickBt12) {
+                clickBt12.addEventListener('click', function(event) {
+                    // Prevent any accidental default behavior (none needed, but safe)
+                    event.preventDefault();
+                    // Open courses.html in the same tab/window.
+                    // This corresponds to the "course file" that contains all course materials.
+                    // According to requirement: "course file will open"
+                    window.location.href = 'c++.html';
+                });
+            } else {
+                // fallback: in case of dynamic content, but our structure guarantees the button
+                console.warn("Button not found — but structure is correct");
+            }
+
+            // Extra safety: Also handle if any other element links to courses in future,
+            // but we explicitly target the required button.
+            // Additionally, the button has a distinct ID for maximum robustness
+            const secondaryBtn = document.getElementById('openClickBtn');
+            if (secondaryBtn && secondaryBtn !== clickBt12) {
+                secondaryBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'c++.html';
+                });
+            }
+        });
+    })();
+</script>
+</body>
+</html>
